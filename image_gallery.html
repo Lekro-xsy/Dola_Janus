@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery - Normal vs DoLA</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            font-weight: 300;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .column {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .column h2 {
+            text-align: center;
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            font-weight: 400;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .normal-column h2 {
+            color: #2563eb;
+        }
+
+        .dola-column h2 {
+            color: #dc2626;
+        }
+
+        .image-item {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 20px;
+        }
+
+        .image-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .prompt {
+            background-color: #f8fafc;
+            border-left: 4px solid #e2e8f0;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #475569;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+        }
+
+        .normal-column .prompt {
+            border-left-color: #3b82f6;
+            background-color: #eff6ff;
+        }
+
+        .dola-column .prompt {
+            border-left-color: #ef4444;
+            background-color: #fef2f2;
+        }
+
+        .image-container {
+            text-align: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.02);
+        }
+
+        .image-index {
+            display: inline-block;
+            background: #334155;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 1024px) {
+            .gallery {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .column h2 {
+                font-size: 1.5em;
+            }
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 10px;
+            }
+            
+            .column {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Image Gallery Comparison</h1>
+        
+        <div class="gallery">
+            <div class="column normal-column">
+                <h2>Normal</h2>
+                <div id="normal-images"></div>
+            </div>
+            
+            <div class="column dola-column">
+                <h2>DoLA</h2>
+                <div id="dola-images"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const prompts = [
+            "A tiny teal fox with glass antlers and exactly 7 silver stars braided in its tail, curled on a luminous moon lily pad above a calm lagoon",
+            "A fluffy lavender bunny with three mismatched wings and a halo of floating candles, lounging on a cotton-candy cloud over a pastel city",
+            "A plump golden owl with clockwork gears visible under its feathers and one glowing crystal eye, sitting on an ancient, levitating book in a moonlit tower",
+            "A small turquoise whale with bioluminescent polka dots and a crown of seashells, drifting through a starlit desert on a silk ribbon of water",
+            "A cheerful magenta raccoon wearing tiny brass goggles and exactly five ribbon bows, balancing on a spinning teacup above a carnival skyline",
+            "A sleek silver fox with a comet tail and three floating miniature moons orbiting it, perched on a frost-covered lantern in twilight",
+            "A chubby emerald dragonling with transparent scales and a pocket watch embedded in its chest, dozing on a pile of glowing autumn leaves",
+            "A pastel-striped bunny with a constellation painted on its back and two tiny lanterns tied to its ears, hopping across a bridge of marshmallows",
+            "A curious mint cat with an embroidered map on its fur and one compass eye, exploring a floating garden of glowing tulips at dawn",
+            "A small coral seahorse wearing a tiny stained-glass saddle and carrying exactly four origami fish, drifting through a lavender cloud canyon",
+            "A round cobalt penguin with a paper boat hat and a lantern made of moonlight, sliding down a ribbon of northern lights above icy spires",
+            "A bright sunflower-colored kitten with velvet feathers instead of whiskers and three tiny bells on its collar, napping on a molten-gold cloud",
+            "A gentle lilac deer with filigree horns and a scarf woven from morning fog, standing on a mirror pond that reflects distant galaxies",
+            "A plump cinnamon hamster with embroidered constellations on its cheeks and a tiny map peeking from its pouch, riding a tea-steam zeppelin at dusk",
+            "A glossy onyx crow with iridescent teeth-like feathers and a tiny lighthouse perched on its back, soaring over a sea of lanterns",
+            "A rosy-cheeked panda with translucent wings and exactly two stitched hearts on its paws, floating amid paper cranes above a sleepy village",
+            "A mint-green fox cub with a tiny constellation crown and a trail of glittering buttons, curled inside a hollow pear that drifts among clouds",
+            "A baby amber owl wearing a pocket sundial and three silk ribbons, perched on a floating cathedral bell that rings with color at sunrise",
+            "A plump teal kitten with porcelain paws and a ring of miniature planets above its head, sitting in a hammock strung between two crescent moons",
+            "A smiling sapphire seal with embroidered waves on its back and a tiny paper lighthouse on its head, bobbing on a warm cloud like a buoy",
+            "A tiny cobalt kitten with exactly four whiskers braided into a tiny rope, dozing on a floating pearl pillow above a pastel sea",
+            "A plump coral fox with a glowing clock embedded in its tail, curled on a drifting teacup made of sunlight",
+            "A fluffy lemon bunny with two miniature rainbows stitched to its ears, hopping along a silver thread that crosses the sky",
+            "A small teal owl with three tiny lanterns orbiting its head, perched on a swinging crescent moon over a quiet town",
+            "A cheerful magenta mouse wearing a crown of paper stars and exactly five stitched buttons, nibbling on a moonbeam biscuit",
+            "A velvet emerald fawn with translucent wings and a tiny compass on its forehead, standing on a mirror tile in the clouds",
+            "A round sapphire penguin with a pocket sundial and a ribbon of northern lights for a scarf, sliding over icy clouds",
+            "A gentle rose kitten with embroidered maps along its spine and one silver bell for a tail, curled on a lantern branch",
+            "A small amber squirrel with porcelain paws and exactly three acorn-shaped lanterns, balancing on a floating tea saucer",
+            "A pastel-striped lamb with a halo of floating leaves and a tiny wooden door on its side, grazing on a cloud meadow",
+            "A glossy onyx raven with tiny stained-glass feathers and a miniature lighthouse on its back, gliding above a sea of paper boats",
+            "A mint-colored hedgehog with luminous polka dots and a tiny clock in its shell, snoozing inside a cinnamon bun cloud",
+            "A plump sunflower chick with velvet wings and three golden buttons down its chest, perched on a drifting book of poems",
+            "A rosy fox cub with a string of tiny planets tied to its tail, curled inside a hollowed lantern that floats at dusk",
+            "A cinnamon bear with embroidered constellations on its belly and a tiny keyhole for a nose, sitting on a warm cloud rock",
+            "A tiny lilac whale with feathered fins and a crown of lily pads, swimming through a ribbon of starlight across the sky",
+            "A bright mint pigeon with a pocket compass and exactly two silk ribbons, landing on a rooftop made of moonpaper",
+            "A sleepy cinnamon kitten with a ring of miniature moons above its head and a tiny map on its paw, napping on a cloud quilt",
+            "A cheerful teal raccoon with glass-button eyes and a tiny pocket watch stitched to its collar, balancing on a moonlit teacup",
+            "A plump amber duckling with a halo of floating origami cranes and three tiny bells on its wing, drifting over a lantern lake",
+            "A tiny teal fox with exactly 3 glass antlers and four silver stars braided into its tail, curled on a moonlit cloud above a lagoon",
+            "A fluffy lavender bunny with exactly 2 mismatched wings and five floating candles circling its head, lounging on a cotton-candy cloud",
+            "A plump golden owl with exactly 1 glowing crystal eye and three clockwork gears showing beneath its feathers, perched on a levitating book",
+            "A small turquoise whale with exactly 7 bioluminescent dots and two seashell crowns, drifting along a ribbon of starlight across the sky",
+            "A cheerful magenta raccoon wearing exactly 5 brass goggles and three ribbon bows, balancing on a spinning teacup above a pastel carnival",
+            "A sleek silver fox with exactly 3 comet tails and four tiny moons orbiting it, perched on a frost-edged lantern at twilight",
+            "A chubby emerald dragonling with exactly 6 transparent scales and one pocket watch embedded in its chest, dozing on glowing autumn leaves",
+            "A pastel-striped bunny with exactly 4 lanterns tied to its ears and three constellations painted on its back, hopping across marshmallow bridges",
+            "A curious mint cat with exactly 1 compass eye and three embroidered maps on its fur, exploring a floating garden of tulips at dawn",
+            "A small coral seahorse carrying exactly 4 origami fish and two stained-glass saddles, drifting through a lavender cloud canyon",
+            "A round cobalt penguin with exactly 3 paper-boat hats and five moonlight lanterns, sliding down a ribbon of northern lights above icy spires",
+            "A bright sunflower kitten with exactly 3 velvet feather whiskers and two tiny bells on its collar, napping on a molten-gold cloud",
+            "A gentle lilac deer with exactly 2 filigree horns and four silk scarves woven from morning fog, standing on a mirror pond of galaxies",
+            "A plump cinnamon hamster with exactly 3 stitched constellations on its cheeks and five tiny maps in its pouch, riding a tea-steam zeppelin",
+            "A glossy onyx crow with exactly 7 iridescent teeth-feathers and one miniature lighthouse on its back, soaring over a sea of lanterns",
+            "A rosy-cheeked panda with exactly 2 translucent wings and three stitched hearts on its paws, floating amid a flock of paper cranes",
+            "A mint-green fox cub with exactly 4 glittering buttons and three constellation crowns, curled inside a hollow pear drifting among clouds",
+            "A baby amber owl wearing exactly 3 silk ribbons and one pocket sundial, perched on a floating cathedral bell that rings with color",
+            "A plump teal kitten with exactly 6 porcelain paws and two miniature planets above its head, swinging in a hammock between crescent moons",
+            "A smiling sapphire seal with exactly 5 embroidered waves on its back and three tiny lighthouses balanced on its head, bobbing on a warm cloud",
+            "A small cinnamon kitten with exactly 1 silver bell on its collar, curled on a drifting cloud above a sleepy village",
+            "A plump teal fox with exactly 2 glass antlers and a tiny moon stitched to its tail, napping on a pearl pillow",
+            "A fluffy lavender bunny holding exactly 3 floating candles and wearing a ribbon of stars, lounging on a marshmallow bridge",
+            "A tiny coral seahorse carrying exactly 4 origami fish and a stained-glass saddle, drifting through a ribbon of starlight",
+            "A bright sunflower chick with exactly 5 velvet buttons down its chest, perched on a drifting book of lullabies",
+            "A rosy-cheeked panda with exactly 2 translucent wings and a pocket sundial tucked in its fur, floating above paper cranes",
+            "A mint-green kitten with exactly 3 embroidered maps on its back and a single compass eye, exploring a floating garden",
+            "A glossy onyx crow with exactly 4 iridescent teeth-feathers and a miniature lighthouse balanced on its back, gliding over lanterns",
+            "A cheerful magenta mouse wearing exactly 5 tiny brass goggles and one ribbon of moonlight, nibbling a star-shaped biscuit",
+            "A plump amber duckling with exactly 3 little bells on its wing and two origami cranes circling, drifting over a lantern lake",
+            "A cute orange cat with three eyes stacked vertically down its face, sitting on a bright rainbow cloud in the sky",
+            "A tiny teal fox whose four whiskers form a perfect horizontal line across its muzzle, curled on a moonlit lily pad",
+            "A fluffy lemon bunny with two ears crossed like an X and a halo of floating leaves, hopping along a silver sky-thread",
+            "A small turquoise whale with five bioluminescent spots arranged in a diagonal stripe and a crown of seashells, drifting through clouds",
+            "A plump golden owl with exactly three eyes in a neat horizontal row and clockwork gears peeking under its feathers, perched on a levitating book",
+            "A pastel-striped lamb with two eyes placed far apart near its ears and a tiny wooden door on its side, grazing on a cloud meadow",
+            "A tiny coral kitten with four tiny moons orbiting in a circle above its head and porcelain paws tucked beneath it",
+            "A gentle lilac deer whose single horn curves horizontally like a crescent and whose stars are stacked along its flank, standing on a mirror pond",
+            "A sleepy cinnamon hamster with three cheeks aligned vertically and a tiny map peeking from its pouch, riding a tea-steam zeppelin",
+            "A round cobalt penguin with two eyes drawn one above the other (vertical pair) and a paper-boat hat, sliding down a ribbon of northern lights",
+            "A small orange kitten with three eyes stacked vertically down its forehead, dozing on a narrow rainbow ribbon in the sky",
+            "A teal fox whose two front paws are attached side-by-side like a single mitten, curled on a floating porcelain teacup",
+            "A fluffy lavender rabbit with five spots arranged in a perfect horizontal line along its back, hopping across a cloud staircase",
+            "A plump golden owl whose pair of wings sprout one above the other (vertical wings), perched on a levitating book",
+            "A tiny coral seahorse with its mouth positioned on the top of its head and a tiny sailor hat, drifting through starlit fog",
+            "A mint kitten with four whiskers forming a neat square around its nose, sitting in a hammock strung between crescent moons",
+            "A rosy-cheeked panda whose eyes are placed far apart at the very edges of its cheeks, floating among paper lanterns",
+            "A sleek silver fox with a tail that curls into a spiral rising straight up like a chimney, perched on a frost lantern",
+            "A small turquoise whale with three blowholes aligned horizontally across its forehead, swimming through a ribbon of clouds",
+            "A cheerful magenta mouse whose three tiny ears run vertically along its spine, nibbling a moonbeam biscuit",
+            "A pastel lamb with exactly two mouths stacked one above the other on its chest, grazing on a cloud meadow",
+            "A glossy onyx crow with eyes set in a diagonal slash from beak to crown, carrying a miniature lighthouse on its back",
+            "A plump sunflower chick with its feet mounted side-by-side at the front like twin flippers, perched on a drifting songbook",
+            "A tiny lilac deer whose antlers grow flat and horizontal like a shelf, holding three glowing teacups in a row",
+            "A mint-green fox cub with stripes that run vertically on one side and horizontally on the other, curled inside a hollow pear",
+            "A baby amber owl with one long feather sticking straight down from its forehead like a tassel and a pocket sundial, perched on a bell",
+            "A round cobalt penguin with eyes stacked vertically above its beak and a paper-boat hat, sliding down northern light ribbons",
+            "A cinnamon hamster whose tiny hands are arranged in a circle around its belly like clock hands, piloting a tea-steam zeppelin",
+            "A bright coral kitten with five tiny moons orbiting in a horizontal ring at knee height, napping on a molten-gold cloud",
+            "A gentle lilac stag whose single horn bends sideways across its jaw like a bridge and whose stars trail in a vertical column",
+            "A shiny cobalt apple that hums softly and sprouts tiny glass leaves, sitting on a velvet windowsill at dusk",
+            "A neon magenta lemon with a pearl rind and gold seeds, balanced on the edge of a floating teacup",
+            "A translucent emerald banana that casts a green shadow and blooms tiny fern fronds, lying on a marble plate",
+            "A glowing indigo pear that flickers like a lantern and rains minuscule blue sparks, perched on a wooden stool",
+            "A matte black orange that reflects constellations on its skin and smells like midnight jasmine, rolling across a table",
+            "A pastel lavender tomato with silver veins and a soft halo, nestled in a porcelain bowl of clouds",
+            "A chrome-gold grape cluster with tiny clock faces instead of seeds, dangling from an invisible vine",
+            "A fluorescent teal strawberry that sparkles like crushed gemstones and leaves faint turquoise footprints on the tablecloth",
+            "A striped violet watermelon whose flesh glows like a lantern and sings when sliced, sitting on a picnic blanket",
+            "A pearlescent red cabbage that changes hue with each blink and exhales tiny rose petals, resting on a kitchen counter",
+            "A deep sapphire carrot that grows sideways like a spiral and hums a low ocean tune beneath the soil",
+            "A shimmering bronze potato with a tiny door and brass knocker, tucked into a basket of moonlight",
+            "A rosy-gold pineapple with feathers instead of leaves and a crown of tiny lanterns, standing on a sunbeam",
+            "A mint-green lemon that tastes of winter snow and leaves a trail of frost wherever it rolls",
+            "A smoky charcoal cherry that glows faintly at its core and rings like a bell when touched, balanced on a saucer",
+            "A candy-pink pumpkin with translucent ribs and a glowing filament inside, resting in a field of mirrored grass",
+            "A sky-blue onion that peels into ribbons of cloud and giggles when the wind passes through it",
+            "An opal-colored peach whose fuzz reflects tiny landscapes and drips liquid moonlight onto the counter",
+            "A sunflower-yellow plum with silver freckles and a tiny compass embedded in its pit, perched on a windowsill",
+            "A grape-sized teal pomegranate that bursts into confetti of sapphires when opened, held in the palm of a child"
+        ];
+
+        function generateImageItems(containerId, folderName) {
+            const container = document.getElementById(containerId);
+            
+            for (let i = 1; i <= 120; i++) {
+                const item = document.createElement('div');
+                item.className = 'image-item';
+                
+                const index = document.createElement('div');
+                index.className = 'image-index';
+                index.textContent = `#${i}`;
+                
+                const prompt = document.createElement('div');
+                prompt.className = 'prompt';
+                prompt.textContent = prompts[i - 1];
+                
+                const imageContainer = document.createElement('div');
+                imageContainer.className = 'image-container';
+                
+                const img = document.createElement('img');
+                img.src = `${folderName}/${i}.jpg`;
+                img.alt = `Image ${i} from ${folderName}`;
+                img.loading = 'lazy';
+                
+                imageContainer.appendChild(img);
+                item.appendChild(index);
+                item.appendChild(prompt);
+                item.appendChild(imageContainer);
+                container.appendChild(item);
+            }
+        }
+
+        // Generate images for both columns
+        generateImageItems('normal-images', 'normal');
+        generateImageItems('dola-images', 'dola');
+    </script>
+</body>
+</html>
