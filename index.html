@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Gallery - Normal vs DoLA</title>
+    <title>Image Gallery - Normal vs DoLA vs Early Stop</title>
     <style>
         * {
             margin: 0;
@@ -32,7 +32,7 @@
 
         .gallery {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr; /* three columns */
             gap: 40px;
             margin-bottom: 40px;
         }
@@ -60,6 +60,9 @@
 
         .dola-column h2 {
             color: #dc2626;
+        }
+        .earlystop-column h2 {
+            color: #16a34a;
         }
 
         .image-item {
@@ -94,12 +97,17 @@
             border-left-color: #ef4444;
             background-color: #fef2f2;
         }
+        .earlystop-column .prompt {
+            border-left-color: #22c55e;
+            background-color: #ecfdf5;
+        }
 
         .image-container {
             text-align: center;
         }
 
         .image-container img {
+            width: 90%; /* slightly shrink images to fit three columns nicely */
             max-width: 100%;
             height: auto;
             border-radius: 8px;
@@ -166,6 +174,11 @@
             <div class="column dola-column">
                 <h2>DoLA</h2>
                 <div id="dola-images"></div>
+            </div>
+            
+            <div class="column earlystop-column">
+                <h2>Early Stop</h2>
+                <div id="earlystop-images"></div>
             </div>
         </div>
     </div>
@@ -354,9 +367,10 @@
             }
         }
 
-        // Generate images for both columns
+        // Generate images for all columns
         generateImageItems('normal-images', 'normal');
         generateImageItems('dola-images', 'dola');
+        generateImageItems('earlystop-images', 'earlystop');
     </script>
 </body>
 </html>
