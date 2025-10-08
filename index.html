@@ -74,6 +74,17 @@
     return rows;
   }
 
+  function toRelPath(base, p) {
+    if (!p) return '';
+    let s = String(p).replace(/\\/g, '/');
+    // already relative
+    if (!s.startsWith('/')) return s.replace(/^\.\/+/, '');
+    const needle = `/${base}/`;
+    const i = s.lastIndexOf(needle);
+    if (i >= 0) return s.substring(i + needle.length);
+    return s; // fallback; caller会再做 base + '/'+s
+  }
+
   async function loadDataset(ds) {
     const base = ds.replace(/\/$/, '');
     const jsonUrl = `${base}/${JSON_NAME}`;
@@ -83,6 +94,15 @@
       const r = await fetch(jsonUrl);
       if (r.ok) {
         const data = await r.json();
+        // 规范化 JSON 的 per_image 路径为相对 base 的路径
+        if (data && Array.isArray(data.per_image)) {
+          data.per_image.forEach(it => {
+            if (it && typeof it.image_path === 'string') {
+              const rel = toRelPath(base, it.image_path);
+              it.image_path = rel;
+            }
+          });
+        }
         return { type: 'json', base, data };
       }
     } catch (e) { /* ignore */ }
@@ -101,7 +121,7 @@
       const item = {
         prompt_idx: Number(r[idx.prompt_idx]),
         prompt: JSON.parse(r[idx.prompt] || '""'),
-        image_path: JSON.parse(r[idx.image_path] || '""'),
+        image_path: toRelPath(base, JSON.parse(r[idx.image_path] || '""')),
       };
       METRICS.forEach(m => { item[m] = r[midx[m]] ? Number(r[midx[m]]) : null; });
       per_image.push(item);
@@ -156,7 +176,7 @@
       const imgw = document.createElement('a');
       imgw.className = 'imgwrap';
       const img = document.createElement('img');
-      const relImg = item.image_path || '';
+      const relImg = toRelPath(ds.base, item.image_path || '');
       img.loading = 'lazy';
       img.src = `${ds.base}/${relImg}`;
       img.alt = item.prompt ?? '';
@@ -197,4 +217,3 @@
   </script>
 </body>
 </html>
-
