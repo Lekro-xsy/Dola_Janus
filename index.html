@@ -14,33 +14,45 @@
     th { background: #f6f6f6; }
     .datasets { margin-bottom: 24px; }
 
-    /* 对比网格 */
+    /* 顶部 7 列列名：sticky 头 */
     .compare { overflow-x: auto; }
-    .grid-header, .grid-row {
+    .grid-header {
       display: grid;
       gap: 10px;
       align-items: start;
-    }
-    /* 第一列为行号/提示信息列（可选），其余 7 列为数据集 */
-    .grid-header {
       position: sticky;
       top: 0;
-      background: #fff;
+      background: linear-gradient(#fff, #fff);
       z-index: 2;
       border-bottom: 1px solid #eee;
       padding: 8px 0;
       margin-top: 8px;
     }
-    .grid-row {
-      border-bottom: 1px dashed #eee;
-      padding: 10px 0;
-    }
-    .col-title, .cell {
-      min-width: 220px;
-    }
-    .col-title small { display: block; color: #777; font-weight: normal; }
+    .col-title { min-width: 220px; font-weight: 600; }
 
-    /* 卡片 */
+    /* 每个编号一行：先标题，再 7 列图 */
+    .row {
+      display: grid;
+      gap: 10px;
+      border-bottom: 1px dashed #eee;
+      padding: 12px 0 16px;
+    }
+    .row-title {
+      grid-column: 1 / -1; /* 跨越整行 */
+      font-size: 12px;
+      color: #444;
+    }
+    .row-title .pid { font-weight: 700; margin-right: 8px; }
+    .row-title .prompt { color: #666; }
+
+    /* 7 列容器 */
+    .row-cols {
+      display: grid;
+      gap: 10px;
+    }
+    .cell { min-width: 220px; }
+
+    /* 卡片与分数（逐行显示） */
     .card { border: 1px solid #ddd; border-radius: 6px; overflow: hidden; background: #fff; }
     .scores { font-size: 12px; padding: 6px 8px; background: #fafafa; border-bottom: 1px solid #eee; white-space: normal; line-height: 1.35; }
     .scores div { margin: 2px 0; }
@@ -49,26 +61,27 @@
     .caption { padding: 6px 8px; font-size: 12px; color: #333; }
     .err { color: #c00; font-size: 12px; margin: 6px 0; }
     code { background: #f6f8fa; padding: 2px 4px; border-radius: 4px; }
-
-    /* 行首（编号+prompt） */
-    .row-info { font-size: 12px; color: #444; }
-    .row-info .pid { font-weight: 600; margin-right: 6px; }
-    .row-info .prompt { color: #666; }
-
-    /* 占位 */
     .placeholder { display: flex; align-items: center; justify-content: center; border: 1px dashed #ddd; border-radius: 6px; min-height: 120px; color: #999; font-size: 12px; background: #fafafa; }
+
+    /* 小屏适配：列数自动降为可滚动 */
+    @media (min-width: 640px) {
+      .grid-header, .row-cols { grid-template-columns: repeat(7, minmax(220px, 1fr)); }
+    }
+    @media (max-width: 639.98px) {
+      .grid-header, .row-cols { grid-template-columns: repeat(2, minmax(220px, 1fr)); }
+    }
   </style>
 </head>
 <body>
   <h1>Janus 评测结果（横向对比 / 每项分数单独换行）</h1>
-  <div class="muted">顶部为各数据集平均分；下方按 <code>prompt_idx</code> 横向对比，每列为一个数据集（normal 在最左）。每张图上方分数一行一个。</div>
+  <div class="muted">顶部为各数据集平均分；下方每个 <code>prompt_idx</code> 一行：行首显示编号与 Prompt，下面紧跟 7 列各数据集结果（normal 在最左）。每张图上方分数一行一个。</div>
 
   <div id="summary" class="datasets"></div>
 
   <div id="content" class="compare"></div>
 
   <script>
-  // 配置：所有集合文件夹（相对于本页）—— normal 放最左
+  // 顺序：normal 放最左，其余依次
   const DATASETS = [
     'normal',
     'Janus_llama_dola_early_exit',
@@ -82,7 +95,7 @@
   const JSON_NAME = 'janus_eval_scores.json';
   const METRICS = ['HPSv2Score','VQAScore','CLIPScore','ITMScore','PickScore','ImageReward'];
 
-  // 简单 CSV 解析（支持带引号与逗号）
+  // 简易 CSV 解析
   function parseCSV(text) {
     const rows = [];
     let i = 0, field = '', row = [], inQuotes = false;
@@ -196,54 +209,49 @@
   }
 
   function renderComparison(container, datasets) {
+    // 顶部 7 列列名
     const header = document.createElement('div');
     header.className = 'grid-header';
-    header.style.gridTemplateColumns = `minmax(240px, 1fr) ${' minmax(220px, 1fr)'.repeat(datasets.length)}`;
-
-    // 左上角标题（行信息列）
-    const leftTitle = document.createElement('div');
-    leftTitle.className = 'col-title';
-    leftTitle.innerHTML = '<strong>编号 & Prompt</strong><small>同编号横向对比</small>';
-    header.appendChild(leftTitle);
-
-    // 各数据集列标题
+    header.style.gridTemplateColumns = `repeat(${datasets.length}, minmax(220px, 1fr))`;
     datasets.forEach(ds => {
       const th = document.createElement('div');
       th.className = 'col-title';
-      th.innerHTML = `<strong>${ds.base}</strong>`;
+      th.textContent = ds.base;
       header.appendChild(th);
     });
+    container.appendChild(header);
 
-    // 收集所有 prompt_idx
+    // 收集全部 prompt_idx
     const allIdx = new Set();
     const maps = datasets.map(ds => buildIndexMap(ds));
     maps.forEach(m => { for (const k of m.keys()) allIdx.add(k); });
     const sortedIdx = Array.from(allIdx).sort((a,b)=>a-b);
 
-    container.appendChild(header);
-
-    // 每一行：一个 prompt_idx
+    // 逐行渲染：每个编号
     sortedIdx.forEach(pid => {
       const row = document.createElement('div');
-      row.className = 'grid-row';
-      row.style.gridTemplateColumns = `minmax(240px, 1fr) ${' minmax(220px, 1fr)'.repeat(datasets.length)}`;
+      row.className = 'row';
 
-      // 行信息（编号 + 任意数据集的 prompt 作为展示）
-      const info = document.createElement('div');
-      info.className = 'row-info';
-      // 找到第一个包含该 pid 的条目来显示 prompt 文本
+      // 行标题（编号 + 选取第一个可用 prompt）
       let promptText = '';
       for (const m of maps) {
         if (m.has(pid)) { promptText = m.get(pid).prompt ?? ''; break; }
       }
-      info.innerHTML = `<span class="pid">#${pid}</span><span class="prompt">${promptText}</span>`;
-      row.appendChild(info);
+      const title = document.createElement('div');
+      title.className = 'row-title';
+      title.innerHTML = `<span class="pid">#${pid}</span><span class="prompt">${promptText}</span>`;
+      row.appendChild(title);
 
-      // 各数据集对应单元格
+      // 7 列
+      const cols = document.createElement('div');
+      cols.className = 'row-cols';
+      cols.style.gridTemplateColumns = `repeat(${datasets.length}, minmax(220px, 1fr))`;
+
       datasets.forEach((ds, i) => {
         const cell = document.createElement('div');
         cell.className = 'cell';
         const item = maps[i].get(pid);
+
         if (!item) {
           const ph = document.createElement('div');
           ph.className = 'placeholder';
@@ -253,7 +261,7 @@
           const card = document.createElement('div');
           card.className = 'card';
 
-          // 分数：逐行显示
+          // 分数（逐行）
           const scores = document.createElement('div');
           scores.className = 'scores';
           METRICS.forEach(m => {
@@ -284,9 +292,10 @@
 
           cell.appendChild(card);
         }
-        row.appendChild(cell);
+        cols.appendChild(cell);
       });
 
+      row.appendChild(cols);
       container.appendChild(row);
     });
   }
