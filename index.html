@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Janus 评测结果</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; margin: 16px; }
+    h1 { margin: 0 0 12px; font-size: 20px; }
+    h2 { margin: 28px 0 10px; font-size: 18px; }
+    .muted { color: #666; font-size: 12px; }
+    table { border-collapse: collapse; width: 100%; margin: 8px 0 18px; font-size: 14px; }
+    th, td { border: 1px solid #ddd; padding: 6px 8px; text-align: center; }
+    th { background: #f6f6f6; }
+    .datasets { margin-bottom: 24px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
+    .card { border: 1px solid #ddd; border-radius: 6px; overflow: hidden; background: #fff; }
+    .scores { font-size: 12px; padding: 6px 8px; background: #fafafa; border-bottom: 1px solid #eee; white-space: pre-wrap; }
+    .imgwrap { display: block; width: 100%; aspect-ratio: 1/1; background: #f2f2f2; overflow: hidden; }
+    .imgwrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .caption { padding: 6px 8px; font-size: 12px; color: #333; }
+    .err { color: #c00; font-size: 12px; }
+    code { background: #f6f8fa; padding: 2px 4px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <h1>Janus 评测结果（本地相对路径）</h1>
+  <div class="muted">顶部显示各集合的列平均分；下方展示每张图，并在图上方标注该图片在各评价标准的得分。</div>
+
+  <div id="summary" class="datasets"></div>
+
+  <div id="content"></div>
+
+  <script>
+  // 配置：所有集合文件夹（相对于本页）
+  const DATASETS = [
+    'Janus_llama_dola_early_exit',
+    'Janus_llama_dola_no_early_exit',
+    'Janus_VIT_dola_early_exit',
+    'Janus_VIT_dola_no_early_exit',
+    'Janus_combined_dola_no_early_exit',
+    'Janus_combined_dola_early_exit',
+    'normal',
+  ];
+  const CSV_NAME = 'janus_eval_scores.csv';
+  const JSON_NAME = 'janus_eval_scores.json';
+  const METRICS = ['HPSv2Score','VQAScore','CLIPScore','ITMScore','PickScore','ImageReward'];
+
+  // 简单 CSV 解析（支持带引号与逗号）
+  function parseCSV(text) {
+    const rows = [];
+    let i = 0, field = '', row = [], inQuotes = false;
+    while (i < text.length) {
+      const c = text[i];
+      if (inQuotes) {
+        if (c === '"') {
+          if (text[i+1] === '"') { field += '"'; i += 2; continue; }
+          inQuotes = false; i++; continue;
+        } else { field += c; i++; continue; }
+      } else {
+        if (c === '"') { inQuotes = true; i++; continue; }
+        if (c === ',') { row.push(field); field = ''; i++; continue; }
+        if (c === '\n' || c === '\r') {
+          // 处理 \r\n / \n / \r
+          if (c === '\r' && text[i+1] === '\n') i++;
+          row.push(field); field = '';
+          if (row.length && !(row.length === 1 && row[0] === '')) rows.push(row);
+          row = []; i++; continue;
+        }
+        field += c; i++;
+      }
+    }
+    if (field.length || row.length) { row.push(field); rows.push(row); }
+    return rows;
+  }
+
+  async function loadDataset(ds) {
+    const base = ds.replace(/\/$/, '');
+    const jsonUrl = `${base}/${JSON_NAME}`;
+    const csvUrl = `${base}/${CSV_NAME}`;
+    // 首选 JSON，失败再退到 CSV
+    try {
+      const r = await fetch(jsonUrl);
+      if (r.ok) {
+        const data = await r.json();
+        return { type: 'json', base, data };
+      }
+    } catch (e) { /* ignore */ }
+    const r2 = await fetch(csvUrl);
+    if (!r2.ok) throw new Error(`加载失败: ${csvUrl}`);
+    const text = await r2.text();
+    const rows = parseCSV(text);
+    if (!rows.length) throw new Error('空 CSV');
+    const header = rows[0];
+    const idx = { prompt_idx: header.indexOf('prompt_idx'), prompt: header.indexOf('prompt'), image_path: header.indexOf('image_path') };
+    const midx = Object.fromEntries(METRICS.map(m => [m, header.indexOf(m)]));
+    const per_image = [];
+    for (let i=1;i<rows.length;i++) {
+      const r = rows[i];
+      if (r[0] === 'AVERAGE') continue;
+      const item = {
+        prompt_idx: Number(r[idx.prompt_idx]),
+        prompt: JSON.parse(r[idx.prompt] || '""'),
+        image_path: JSON.parse(r[idx.image_path] || '""'),
+      };
+      METRICS.forEach(m => { item[m] = r[midx[m]] ? Number(r[midx[m]]) : null; });
+      per_image.push(item);
+    }
+    // 取最后一行为平均行
+    const last = rows[rows.length - 1];
+    const averages = {};
+    METRICS.forEach(m => {
+      const j = header.indexOf(m);
+      averages[m] = j >= 0 && last && last[0] === 'AVERAGE' && last[j] !== '' ? Number(last[j]) : null;
+    });
+    return { type: 'csv', base, data: { per_image, averages } };
+  }
+
+  function fmt(x) { return (x === null || isNaN(x)) ? '' : Number(x).toFixed(4); }
+
+  function renderSummary(container, datasets) {
+    const tbl = document.createElement('table');
+    const thead = document.createElement('thead');
+    const trh = document.createElement('tr');
+    ['数据集', ...METRICS].forEach(h => { const th = document.createElement('th'); th.textContent = h; trh.appendChild(th); });
+    thead.appendChild(trh); tbl.appendChild(thead);
+    const tbody = document.createElement('tbody');
+    datasets.forEach(ds => {
+      const tr = document.createElement('tr');
+      const name = document.createElement('td'); name.textContent = ds.base; tr.appendChild(name);
+      METRICS.forEach(m => { const td = document.createElement('td'); td.textContent = fmt(ds.data.averages?.[m] ?? null); tr.appendChild(td); });
+      tbody.appendChild(tr);
+    });
+    tbl.appendChild(tbody);
+    container.innerHTML = '<h2>各数据集平均分（按列）</h2>';
+    container.appendChild(tbl);
+  }
+
+  function renderDatasetSection(container, ds) {
+    const sec = document.createElement('section');
+    const title = document.createElement('h2');
+    title.textContent = ds.base;
+    sec.appendChild(title);
+
+    const grid = document.createElement('div');
+    grid.className = 'grid';
+    (ds.data.per_image || []).forEach(item => {
+      const card = document.createElement('div');
+      card.className = 'card';
+      const scores = document.createElement('div');
+      scores.className = 'scores';
+      const line = METRICS.map(m => `${m.replace('Score','')}: ${fmt(item[m])}`).join('  |  ');
+      scores.textContent = line;
+      card.appendChild(scores);
+
+      const imgw = document.createElement('a');
+      imgw.className = 'imgwrap';
+      const img = document.createElement('img');
+      const relImg = item.image_path || '';
+      img.loading = 'lazy';
+      img.src = `${ds.base}/${relImg}`;
+      img.alt = item.prompt ?? '';
+      imgw.href = img.src; // 点击看原图
+      imgw.target = '_blank';
+      imgw.appendChild(img);
+      card.appendChild(imgw);
+
+      const cap = document.createElement('div');
+      cap.className = 'caption';
+      cap.textContent = `#${item.prompt_idx} ${item.prompt ?? ''}`;
+      card.appendChild(cap);
+
+      grid.appendChild(card);
+    });
+    sec.appendChild(grid);
+    container.appendChild(sec);
+  }
+
+  (async function main(){
+    const loaded = [];
+    for (const ds of DATASETS) {
+      try {
+        const d = await loadDataset(ds);
+        loaded.push(d);
+      } catch (e) {
+        const warn = document.createElement('div');
+        warn.className = 'err';
+        warn.textContent = `跳过 ${ds}: 未找到 ${JSON_NAME} 或 ${CSV_NAME}`;
+        document.getElementById('content').appendChild(warn);
+      }
+    }
+    if (loaded.length) {
+      renderSummary(document.getElementById('summary'), loaded);
+      loaded.forEach(d => renderDatasetSection(document.getElementById('content'), d));
+    }
+  })();
+  </script>
+</body>
+</html>
+
