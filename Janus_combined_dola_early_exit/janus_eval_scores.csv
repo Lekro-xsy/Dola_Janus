@@ -1,0 +1,150 @@
+prompt_idx,prompt,image_path,HPSv2Score,VQAScore,CLIPScore,ITMScore,PickScore,ImageReward
+0,"A cat with three eyes","outputs_dola/prompt_0000/img_00.jpg",0.287109,0.345587,0.263166,0.590943,0.221789,0.782071
+1,"A hand with only two fingers","outputs_dola/prompt_0001/img_00.jpg",0.276855,0.518791,0.277974,0.591048,0.222777,-0.458847
+2,"A cat walking on two legs","outputs_dola/prompt_0002/img_00.jpg",0.280762,0.815372,0.244830,0.598813,0.229732,1.682491
+3,"A blue apple","outputs_dola/prompt_0003/img_00.jpg",0.288818,0.965452,0.302372,0.602067,0.223174,1.831663
+4,"Eyes stacked vertically on a face","outputs_dola/prompt_0004/img_00.jpg",0.258545,0.728761,0.196225,0.601317,0.204187,0.248449
+5,"A dog with butterfly wings","outputs_dola/prompt_0005/img_00.jpg",0.305664,0.986057,0.321226,0.612464,0.237261,2.007323
+6,"A fish swimming in the sky","outputs_dola/prompt_0006/img_00.jpg",0.295410,0.881631,0.277546,0.608377,0.233726,1.604208
+7,"A chair made of clouds","outputs_dola/prompt_0007/img_00.jpg",0.283447,0.958870,0.334423,0.627643,0.237427,1.904934
+8,"A clock with melting numbers","outputs_dola/prompt_0008/img_00.jpg",0.282227,0.934834,0.266249,0.611522,0.237593,1.817225
+9,"A tree with glowing leaves","outputs_dola/prompt_0009/img_00.jpg",0.282471,0.931190,0.267414,0.619543,0.234412,1.598407
+10,"A horse with zebra stripes","outputs_dola/prompt_0010/img_00.jpg",0.281982,0.934836,0.297585,0.587066,0.221949,1.747607
+11,"A spider with one giant leg","outputs_dola/prompt_0011/img_00.jpg",0.280029,0.541569,0.260391,0.604587,0.227614,1.144479
+12,"A bicycle with square wheels","outputs_dola/prompt_0012/img_00.jpg",0.271973,0.759271,0.245286,0.596259,0.216866,0.151049
+13,"A candle burning upside down","outputs_dola/prompt_0013/img_00.jpg",0.280273,0.327193,0.256662,0.604237,0.221923,-0.084551
+14,"A snail with a transparent shell","outputs_dola/prompt_0014/img_00.jpg",0.285889,0.938492,0.323647,0.614240,0.235709,1.874895
+15,"A mountain floating in the ocean","outputs_dola/prompt_0015/img_00.jpg",0.293701,0.927103,0.289516,0.617855,0.240174,1.286991
+16,"A bird with four wings","outputs_dola/prompt_0016/img_00.jpg",0.291260,0.541568,0.253724,0.584668,0.224934,0.891840
+17,"A mirror reflecting the wrong person","outputs_dola/prompt_0017/img_00.jpg",0.272217,0.483561,0.252824,0.589737,0.212999,0.826384
+18,"A frog with fur","outputs_dola/prompt_0018/img_00.jpg",0.281738,0.956537,0.285101,0.609984,0.227715,1.912501
+19,"A tiger with polka dots","outputs_dola/prompt_0019/img_00.jpg",0.284424,0.941706,0.296200,0.608492,0.223240,1.957167
+20,"A shoe made of glass","outputs_dola/prompt_0020/img_00.jpg",0.299072,0.969466,0.324363,0.628390,0.242743,1.713149
+21,"A violin made of ice","outputs_dola/prompt_0021/img_00.jpg",0.290771,0.969343,0.357221,0.615720,0.241943,1.900887
+22,"A house shaped like a shoe","outputs_dola/prompt_0022/img_00.jpg",0.299316,0.909170,0.288951,0.620413,0.247018,1.818635
+23,"A rainbow in grayscale","outputs_dola/prompt_0023/img_00.jpg",0.261719,0.815376,0.262052,0.585504,0.214640,1.160952
+24,"A sun with a face","outputs_dola/prompt_0024/img_00.jpg",0.291748,0.983291,0.277718,0.618950,0.222548,1.936264
+25,"A moon shaped like a cube","outputs_dola/prompt_0025/img_00.jpg",0.282715,0.717462,0.300547,0.609639,0.229700,1.745482
+26,"A lion with feathers","outputs_dola/prompt_0026/img_00.jpg",0.285889,0.649441,0.244054,0.613532,0.215963,1.640956
+27,"A car with spider legs","outputs_dola/prompt_0027/img_00.jpg",0.307617,0.956303,0.301015,0.611437,0.249189,1.929839
+28,"A fish with human arms","outputs_dola/prompt_0028/img_00.jpg",0.290527,0.938486,0.249753,0.603197,0.230245,0.552519
+29,"A dog with a giraffe neck","outputs_dola/prompt_0029/img_00.jpg",0.290527,0.854503,0.284674,0.596255,0.227354,0.655638
+30,"A tree growing upside down","outputs_dola/prompt_0030/img_00.jpg",0.266602,0.706333,0.238393,0.603968,0.216224,0.454632
+31,"A butterfly with transparent wings","outputs_dola/prompt_0031/img_00.jpg",0.281738,0.649438,0.303760,0.612674,0.224209,1.184953
+32,"A candle with water instead of fire","outputs_dola/prompt_0032/img_00.jpg",0.269775,0.123223,0.259427,0.605328,0.220363,-0.282027
+33,"A robot with a flower head","outputs_dola/prompt_0033/img_00.jpg",0.301758,0.965452,0.298457,0.616471,0.238472,1.899448
+34,"A dragon made of paper","outputs_dola/prompt_0034/img_00.jpg",0.288818,0.975874,0.333885,0.613062,0.228209,1.886463
+35,"A jellyfish floating in space","outputs_dola/prompt_0035/img_00.jpg",0.290039,0.806661,0.288020,0.604487,0.240977,-0.431473
+36,"A cactus with fur","outputs_dola/prompt_0036/img_00.jpg",0.266113,0.839619,0.276614,0.591294,0.208149,-0.721445
+37,"A snake with wings","outputs_dola/prompt_0037/img_00.jpg",0.286621,0.956531,0.277462,0.613334,0.235649,1.951665
+38,"A cloud shaped like a hand","outputs_dola/prompt_0038/img_00.jpg",0.275146,0.941706,0.261605,0.609848,0.220729,0.574478
+39,"A cat with butterfly antennae","outputs_dola/prompt_0039/img_00.jpg",0.292480,0.953739,0.299997,0.606812,0.234823,1.969398
+40,"A piano with rainbow keys","outputs_dola/prompt_0040/img_00.jpg",0.269043,0.881633,0.327390,0.609630,0.227967,1.687644
+41,"A sandwich glowing in the dark","outputs_dola/prompt_0041/img_00.jpg",0.291992,0.985153,0.322083,0.622551,0.241761,1.853846
+42,"A lamp with eyes","outputs_dola/prompt_0042/img_00.jpg",0.284424,0.958875,0.274356,0.622569,0.224903,1.605352
+43,"A human face on a flower","outputs_dola/prompt_0043/img_00.jpg",0.294434,0.978619,0.292259,0.615709,0.229234,1.950380
+44,"A turtle with rocket engines","outputs_dola/prompt_0044/img_00.jpg",0.271240,0.953736,0.297553,0.619879,0.215958,1.815716
+45,"A cube-shaped watermelon","outputs_dola/prompt_0045/img_00.jpg",0.252441,0.260864,0.298243,0.591412,0.213032,-1.800806
+46,"A spider web made of gold","outputs_dola/prompt_0046/img_00.jpg",0.281494,0.706338,0.260991,0.601264,0.224510,-1.480624
+47,"A fish with bird feathers","outputs_dola/prompt_0047/img_00.jpg",0.272217,0.300254,0.233981,0.594014,0.207981,1.833396
+48,"A book that glows","outputs_dola/prompt_0048/img_00.jpg",0.265869,0.967575,0.280751,0.609239,0.224217,1.840599
+49,"A horse with rainbow hair","outputs_dola/prompt_0049/img_00.jpg",0.295898,0.986901,0.303546,0.619946,0.235949,1.886175
+50,"A rabbit with dragon horns","outputs_dola/prompt_0050/img_00.jpg",0.297119,0.958872,0.268917,0.616764,0.241796,1.794690
+51,"A door in the middle of the desert","outputs_dola/prompt_0051/img_00.jpg",0.294678,0.967577,0.311754,0.608944,0.234860,1.932771
+52,"A penguin with flamingo legs","outputs_dola/prompt_0052/img_00.jpg",0.281982,0.769715,0.241736,0.596776,0.217558,1.564058
+53,"A banana with spikes","outputs_dola/prompt_0053/img_00.jpg",0.272705,0.985215,0.281926,0.595971,0.221398,1.372705
+54,"A lizard with a crystal tail","outputs_dola/prompt_0054/img_00.jpg",0.292969,0.903859,0.337409,0.616944,0.220620,1.559632
+55,"A river flowing upward","outputs_dola/prompt_0055/img_00.jpg",0.259521,0.660957,0.249118,0.564274,0.206605,-0.429077
+56,"A cloud raining fire","outputs_dola/prompt_0056/img_00.jpg",0.263916,0.759271,0.289809,0.609540,0.212614,0.299572
+57,"A dragonfly with human eyes","outputs_dola/prompt_0057/img_00.jpg",0.268555,0.923031,0.282595,0.615388,0.216491,1.078125
+58,"A city floating in the sky","outputs_dola/prompt_0058/img_00.jpg",0.282227,0.874765,0.259273,0.612357,0.223578,1.607448
+59,"A hat made of glass","outputs_dola/prompt_0059/img_00.jpg",0.263184,0.531095,0.208454,0.602677,0.222500,0.536993
+60,"A watch with no hands","outputs_dola/prompt_0060/img_00.jpg",0.269287,0.448977,0.228497,0.589158,0.217319,0.536214
+61,"A giraffe with two heads","outputs_dola/prompt_0061/img_00.jpg",0.268311,0.211253,0.243405,0.585450,0.215670,0.475390
+62,"A wolf with glowing eyes","outputs_dola/prompt_0062/img_00.jpg",0.306396,0.985153,0.284281,0.619618,0.251514,1.950298
+63,"A cake floating in space","outputs_dola/prompt_0063/img_00.jpg",0.297852,0.914058,0.316446,0.617449,0.245821,1.764709
+64,"A bird with a fish tail","outputs_dola/prompt_0064/img_00.jpg",0.279785,0.934834,0.279552,0.602152,0.214269,1.842485
+65,"A cat with scales","outputs_dola/prompt_0065/img_00.jpg",0.276367,0.353786,0.301816,0.594750,0.221971,0.532433
+66,"A star shaped like a cube","outputs_dola/prompt_0066/img_00.jpg",0.275635,0.495033,0.290946,0.601668,0.212334,-0.430627
+67,"A tree with clocks instead of leaves","outputs_dola/prompt_0067/img_00.jpg",0.303955,0.941704,0.283028,0.611940,0.238571,1.860326
+68,"A chair made of bones","outputs_dola/prompt_0068/img_00.jpg",0.293945,0.975877,0.333162,0.627232,0.249415,1.766197
+69,"A violin floating in the air","outputs_dola/prompt_0069/img_00.jpg",0.283203,0.918540,0.303378,0.607743,0.230168,1.907138
+70,"A rainbow made of fire","outputs_dola/prompt_0070/img_00.jpg",0.257080,0.345589,0.271147,0.606892,0.207328,1.277358
+71,"A snail with glowing horns","outputs_dola/prompt_0071/img_00.jpg",0.291016,0.967571,0.304532,0.617428,0.241622,1.908259
+72,"A train made of wood","outputs_dola/prompt_0072/img_00.jpg",0.294678,0.975880,0.338855,0.599174,0.241811,1.405730
+73,"A rabbit with butterfly wings","outputs_dola/prompt_0073/img_00.jpg",0.302002,0.992456,0.288653,0.612316,0.249643,1.997314
+74,"A dog with human ears","outputs_dola/prompt_0074/img_00.jpg",0.291016,0.309784,0.269840,0.591332,0.216019,1.313495
+75,"A spider with a smiley face","outputs_dola/prompt_0075/img_00.jpg",0.291748,0.986898,0.312263,0.613590,0.240666,1.935118
+76,"A sun that is black","outputs_dola/prompt_0076/img_00.jpg",0.273193,0.284274,0.275036,0.592308,0.212599,-0.114082
+77,"A moon with rainbow colors","outputs_dola/prompt_0077/img_00.jpg",0.280518,0.854508,0.316087,0.603022,0.228383,1.713494
+78,"A bridge made of glass","outputs_dola/prompt_0078/img_00.jpg",0.295166,0.953739,0.328210,0.625601,0.244153,1.281749
+79,"A door on a cloud","outputs_dola/prompt_0079/img_00.jpg",0.281006,0.815376,0.289014,0.615037,0.224289,1.947565
+80,"A fish with glowing eyes","outputs_dola/prompt_0080/img_00.jpg",0.277100,0.956300,0.266047,0.623070,0.227088,1.809611
+81,"A chair shaped like a hand","outputs_dola/prompt_0081/img_00.jpg",0.272705,0.832271,0.298885,0.623058,0.226777,-0.436044
+82,"A bird with no wings","outputs_dola/prompt_0082/img_00.jpg",0.286377,0.204755,0.241515,0.583214,0.219406,-0.182036
+83,"A car with wings","outputs_dola/prompt_0083/img_00.jpg",0.303955,0.983294,0.311000,0.610164,0.235536,1.947448
+84,"A dragon breathing water","outputs_dola/prompt_0084/img_00.jpg",0.284180,0.934828,0.311701,0.613690,0.228984,1.700601
+85,"A flower made of metal","outputs_dola/prompt_0085/img_00.jpg",0.298340,0.972905,0.327663,0.619137,0.243416,1.898946
+86,"A crystal shaped like a heart","outputs_dola/prompt_0086/img_00.jpg",0.264404,0.334957,0.253864,0.591987,0.209191,-1.390534
+87,"A mountain with a door","outputs_dola/prompt_0087/img_00.jpg",0.254639,0.187894,0.259232,0.580016,0.209080,-1.378790
+88,"A dog with two tails","outputs_dola/prompt_0088/img_00.jpg",0.277588,0.518784,0.259461,0.598638,0.216242,0.970816
+89,"A fox with rainbow fur","outputs_dola/prompt_0089/img_00.jpg",0.291748,0.969346,0.329495,0.620567,0.247176,1.954043
+90,"A shoe made of fire","outputs_dola/prompt_0090/img_00.jpg",0.267090,0.931182,0.320809,0.618389,0.224392,1.276647
+91,"A tree with candy leaves","outputs_dola/prompt_0091/img_00.jpg",0.279053,0.806665,0.275808,0.605153,0.220880,0.599580
+92,"A spider with rainbow legs","outputs_dola/prompt_0092/img_00.jpg",0.293701,0.956302,0.350232,0.617786,0.247441,1.878504
+93,"A fish flying with balloons","outputs_dola/prompt_0093/img_00.jpg",0.289307,0.971124,0.314550,0.613757,0.234745,1.943590
+94,"A lamp shaped like the moon","outputs_dola/prompt_0094/img_00.jpg",0.273926,0.941707,0.299536,0.596685,0.217035,0.920627
+95,"A star made of ice","outputs_dola/prompt_0095/img_00.jpg",0.269531,0.950948,0.305003,0.617232,0.231960,1.962669
+96,"A castle floating on a cloud","outputs_dola/prompt_0096/img_00.jpg",0.293701,0.788743,0.311569,0.616989,0.247743,1.743585
+97,"A human hand made of stone","outputs_dola/prompt_0097/img_00.jpg",0.274658,0.967574,0.260960,0.609895,0.228817,0.555010
+98,"A cat with four tails","outputs_dola/prompt_0098/img_00.jpg",0.280762,0.748956,0.273403,0.591070,0.233538,1.431504
+99,"Two suns in the sky","outputs_dola/prompt_0099/img_00.jpg",0.254395,0.353785,0.246167,0.585719,0.202797,-0.075091
+100,"A green ocean","outputs_dola/prompt_0100/img_00.jpg",0.269287,0.375135,0.242836,0.563927,0.218537,-1.529643
+101,"Three moons above a city","outputs_dola/prompt_0101/img_00.jpg",0.284424,0.941707,0.321636,0.620071,0.228818,1.713632
+102,"A red snowman","outputs_dola/prompt_0102/img_00.jpg",0.278564,0.327198,0.254770,0.593019,0.221570,-1.314442
+103,"A chair with three legs","outputs_dola/prompt_0103/img_00.jpg",0.284668,0.779560,0.266533,0.604995,0.234132,1.047846
+104,"Two blue apples","outputs_dola/prompt_0104/img_00.jpg",0.286621,0.963570,0.318563,0.604287,0.228738,1.546512
+105,"A black rainbow","outputs_dola/prompt_0105/img_00.jpg",0.271240,0.125164,0.254738,0.594564,0.219672,-0.296881
+106,"Four eyes on one hand","outputs_dola/prompt_0106/img_00.jpg",0.274170,0.941701,0.218223,0.610089,0.215886,1.535636
+107,"A yellow forest","outputs_dola/prompt_0107/img_00.jpg",0.274170,0.903864,0.291916,0.588913,0.214051,0.671866
+108,"Three doors on one wall","outputs_dola/prompt_0108/img_00.jpg",0.258301,0.672679,0.276470,0.580209,0.209569,-0.098408
+109,"A cow with two heads","outputs_dola/prompt_0109/img_00.jpg",0.280762,0.291014,0.246934,0.584203,0.218567,0.579623
+110,"A purple tree","outputs_dola/prompt_0110/img_00.jpg",0.292725,0.981136,0.319773,0.589391,0.237285,1.735849
+111,"Four shoes on one foot","outputs_dola/prompt_0111/img_00.jpg",0.256104,0.769721,0.239415,0.579767,0.215300,-0.814747
+112,"A silver river","outputs_dola/prompt_0112/img_00.jpg",0.229614,0.472366,0.196734,0.542152,0.195269,-1.741058
+113,"Two clocks on one tower","outputs_dola/prompt_0113/img_00.jpg",0.285889,0.868813,0.278350,0.589929,0.225489,0.154281
+114,"A red cloud","outputs_dola/prompt_0114/img_00.jpg",0.253906,0.518792,0.230590,0.581101,0.209337,0.191575
+115,"Five fingers but all thumbs","outputs_dola/prompt_0115/img_00.jpg",0.244385,0.672679,0.186498,0.601958,0.201946,-0.190833
+116,"Three golden birds in a cage","outputs_dola/prompt_0116/img_00.jpg",0.281982,0.187894,0.313131,0.606108,0.223610,1.625938
+117,"A pink desert","outputs_dola/prompt_0117/img_00.jpg",0.245972,0.684608,0.240163,0.561538,0.207373,-1.091539
+118,"A cat with two noses","outputs_dola/prompt_0118/img_00.jpg",0.291748,0.275527,0.225827,0.581499,0.220523,0.297178
+119,"Two green suns","outputs_dola/prompt_0119/img_00.jpg",0.264648,0.230212,0.254346,0.584289,0.216086,-0.744883
+120,"A staircase going in circles","outputs_dola/prompt_0120/img_00.jpg",0.280518,0.918544,0.235777,0.609139,0.228995,1.059135
+121,"Three mountains floating in the sky","outputs_dola/prompt_0121/img_00.jpg",0.256104,0.375134,0.242191,0.585373,0.213743,-1.086964
+122,"A white fire","outputs_dola/prompt_0122/img_00.jpg",0.242310,0.224879,0.237161,0.571189,0.199187,0.127216
+123,"Four black stars","outputs_dola/prompt_0123/img_00.jpg",0.254883,0.275528,0.225265,0.591716,0.205374,-0.231505
+124,"A dog with three ears","outputs_dola/prompt_0124/img_00.jpg",0.305176,0.353784,0.267541,0.596513,0.234814,1.600705
+125,"A blue banana","outputs_dola/prompt_0125/img_00.jpg",0.267334,0.965452,0.309539,0.593516,0.223832,-1.860681
+126,"Two purple fish flying","outputs_dola/prompt_0126/img_00.jpg",0.274170,0.956304,0.312829,0.612037,0.227932,1.565557
+127,"A green moon","outputs_dola/prompt_0127/img_00.jpg",0.276123,0.972787,0.271753,0.591536,0.222548,-0.075671
+128,"Three windows stacked vertically","outputs_dola/prompt_0128/img_00.jpg",0.248901,0.717464,0.219840,0.564944,0.210340,-1.466769
+129,"A red tree with no leaves","outputs_dola/prompt_0129/img_00.jpg",0.297607,0.788749,0.305135,0.602513,0.229834,1.272995
+130,"Four candles burning ice","outputs_dola/prompt_0130/img_00.jpg",0.241455,0.495035,0.261684,0.593928,0.201373,-0.283005
+131,"A silver apple","outputs_dola/prompt_0131/img_00.jpg",0.281006,0.941707,0.265734,0.596609,0.221487,1.155312
+132,"Two chairs upside down","outputs_dola/prompt_0132/img_00.jpg",0.250732,0.198456,0.156188,0.552825,0.213668,-2.250678
+133,"A yellow river flowing upward","outputs_dola/prompt_0133/img_00.jpg",0.263672,0.748961,0.335370,0.612380,0.211937,1.371837
+134,"Five eyes on one face","outputs_dola/prompt_0134/img_00.jpg",0.260986,0.706328,0.193391,0.570676,0.200844,1.160602
+135,"A pink mountain","outputs_dola/prompt_0135/img_00.jpg",0.261475,0.958875,0.269747,0.599021,0.222851,1.646794
+136,"Two golden turtles","outputs_dola/prompt_0136/img_00.jpg",0.276855,0.967576,0.329079,0.609311,0.228011,1.409469
+137,"Three doors in the sky","outputs_dola/prompt_0137/img_00.jpg",0.261963,0.317131,0.269959,0.615095,0.210333,1.856126
+138,"A black ocean with glowing waves","outputs_dola/prompt_0138/img_00.jpg",0.279053,0.531094,0.252658,0.613842,0.230611,-0.669700
+139,"Four birds with square wings","outputs_dola/prompt_0139/img_00.jpg",0.273193,0.590169,0.273751,0.585714,0.206079,0.153578
+140,"A green cloud raining sand","outputs_dola/prompt_0140/img_00.jpg",0.290039,0.541569,0.280011,0.624059,0.231388,1.865896
+141,"Two suns side by side","outputs_dola/prompt_0141/img_00.jpg",0.271973,0.448977,0.276245,0.592862,0.207262,0.346561
+142,"A red giraffe","outputs_dola/prompt_0142/img_00.jpg",0.284912,0.788749,0.282824,0.592515,0.214638,-0.101950
+143,"Three hands on one arm","outputs_dola/prompt_0143/img_00.jpg",0.261230,0.779558,0.235747,0.589728,0.205847,-0.040988
+144,"A blue spider web","outputs_dola/prompt_0144/img_00.jpg",0.298096,0.578753,0.288468,0.606942,0.228551,0.850917
+145,"Two moons stacked vertically","outputs_dola/prompt_0145/img_00.jpg",0.268311,0.728758,0.279465,0.602329,0.212327,0.871651
+146,"Four flying rabbits","outputs_dola/prompt_0146/img_00.jpg",0.288330,0.327196,0.285540,0.604264,0.221595,1.326722
+147,"A golden tree with crystal leaves","outputs_dola/prompt_0147/img_00.jpg",0.282715,0.931190,0.317455,0.602646,0.237644,0.054865
+AVERAGE,,,0.278698,0.733134,0.278347,0.602178,0.224382,0.889744

@@ -1,0 +1,150 @@
+prompt_idx,prompt,image_path,HPSv2Score,VQAScore,CLIPScore,ITMScore,PickScore,ImageReward
+0,"A cat with three eyes","generated_from_prompts_serial/prompt_0000/img_00.jpg",0.289795,0.284272,0.266951,0.593302,0.225959,0.775005
+1,"A hand with only two fingers","generated_from_prompts_serial/prompt_0001/img_00.jpg",0.272705,0.518791,0.271797,0.597326,0.216319,-0.197644
+2,"A cat walking on two legs","generated_from_prompts_serial/prompt_0002/img_00.jpg",0.286377,0.706335,0.232499,0.595526,0.227564,1.736929
+3,"A blue apple","generated_from_prompts_serial/prompt_0003/img_00.jpg",0.292969,0.971126,0.323662,0.603410,0.223713,1.620232
+4,"Eyes stacked vertically on a face","generated_from_prompts_serial/prompt_0004/img_00.jpg",0.265381,0.769724,0.218546,0.601238,0.202667,-0.059265
+5,"A dog with butterfly wings","generated_from_prompts_serial/prompt_0005/img_00.jpg",0.301758,0.978622,0.329191,0.612803,0.232981,2.003989
+6,"A fish swimming in the sky","generated_from_prompts_serial/prompt_0006/img_00.jpg",0.298828,0.832267,0.278383,0.608767,0.233958,1.794870
+7,"A chair made of clouds","generated_from_prompts_serial/prompt_0007/img_00.jpg",0.295410,0.798041,0.316133,0.625805,0.237812,1.957907
+8,"A clock with melting numbers","generated_from_prompts_serial/prompt_0008/img_00.jpg",0.286865,0.887677,0.251957,0.605601,0.236263,1.884734
+9,"A tree with glowing leaves","generated_from_prompts_serial/prompt_0009/img_00.jpg",0.275635,0.969468,0.311598,0.621686,0.231920,1.405681
+10,"A horse with zebra stripes","generated_from_prompts_serial/prompt_0010/img_00.jpg",0.292480,0.881634,0.289610,0.593568,0.222597,1.684393
+11,"A spider with one giant leg","generated_from_prompts_serial/prompt_0011/img_00.jpg",0.275146,0.448974,0.265548,0.605680,0.225293,1.386646
+12,"A bicycle with square wheels","generated_from_prompts_serial/prompt_0012/img_00.jpg",0.259033,0.291015,0.223659,0.587133,0.218528,0.548433
+13,"A candle burning upside down","generated_from_prompts_serial/prompt_0013/img_00.jpg",0.287842,0.284270,0.225907,0.601121,0.223422,0.109588
+14,"A snail with a transparent shell","generated_from_prompts_serial/prompt_0014/img_00.jpg",0.281494,0.684607,0.288797,0.606855,0.229741,1.282509
+15,"A mountain floating in the ocean","generated_from_prompts_serial/prompt_0015/img_00.jpg",0.294678,0.931186,0.283949,0.620677,0.240952,1.758289
+16,"A bird with four wings","generated_from_prompts_serial/prompt_0016/img_00.jpg",0.300049,0.638123,0.257369,0.588853,0.224969,1.335136
+17,"A mirror reflecting the wrong person","generated_from_prompts_serial/prompt_0017/img_00.jpg",0.280762,0.267050,0.220365,0.590330,0.219669,1.448625
+18,"A frog with fur","generated_from_prompts_serial/prompt_0018/img_00.jpg",0.278320,0.899022,0.287549,0.607384,0.226949,1.892105
+19,"A tiger with polka dots","generated_from_prompts_serial/prompt_0019/img_00.jpg",0.276855,0.672680,0.262760,0.596111,0.211735,0.057508
+20,"A shoe made of glass","generated_from_prompts_serial/prompt_0020/img_00.jpg",0.296387,0.967575,0.322472,0.627930,0.239915,1.355039
+21,"A violin made of ice","generated_from_prompts_serial/prompt_0021/img_00.jpg",0.267334,0.832263,0.344612,0.611818,0.228348,1.463700
+22,"A house shaped like a shoe","generated_from_prompts_serial/prompt_0022/img_00.jpg",0.297119,0.375132,0.276801,0.611419,0.245494,1.834706
+23,"A rainbow in grayscale","generated_from_prompts_serial/prompt_0023/img_00.jpg",0.279785,0.554412,0.267966,0.599509,0.228223,1.513025
+24,"A sun with a face","generated_from_prompts_serial/prompt_0024/img_00.jpg",0.286377,0.984249,0.271956,0.618857,0.215918,1.815135
+25,"A moon shaped like a cube","generated_from_prompts_serial/prompt_0025/img_00.jpg",0.284424,0.531094,0.322329,0.616697,0.223733,1.958575
+26,"A lion with feathers","generated_from_prompts_serial/prompt_0026/img_00.jpg",0.284912,0.967576,0.263368,0.614763,0.217066,1.710867
+27,"A car with spider legs","generated_from_prompts_serial/prompt_0027/img_00.jpg",0.302246,0.978622,0.309366,0.617243,0.244185,1.928832
+28,"A fish with human arms","generated_from_prompts_serial/prompt_0028/img_00.jpg",0.285400,0.918535,0.274480,0.611233,0.228823,0.607527
+29,"A dog with a giraffe neck","generated_from_prompts_serial/prompt_0029/img_00.jpg",0.279297,0.769721,0.264211,0.579064,0.220278,-0.206492
+30,"A tree growing upside down","generated_from_prompts_serial/prompt_0030/img_00.jpg",0.259521,0.788738,0.266543,0.601608,0.214586,0.682474
+31,"A butterfly with transparent wings","generated_from_prompts_serial/prompt_0031/img_00.jpg",0.289795,0.854506,0.312451,0.611654,0.225185,1.525407
+32,"A candle with water instead of fire","generated_from_prompts_serial/prompt_0032/img_00.jpg",0.276611,0.327195,0.275306,0.614447,0.225256,0.942006
+33,"A robot with a flower head","generated_from_prompts_serial/prompt_0033/img_00.jpg",0.295166,0.958874,0.304759,0.622142,0.237544,1.843644
+34,"A dragon made of paper","generated_from_prompts_serial/prompt_0034/img_00.jpg",0.297119,0.981132,0.334682,0.614042,0.232175,1.754319
+35,"A jellyfish floating in space","generated_from_prompts_serial/prompt_0035/img_00.jpg",0.288574,0.847850,0.271434,0.606019,0.235587,-0.159538
+36,"A cactus with fur","generated_from_prompts_serial/prompt_0036/img_00.jpg",0.276123,0.948167,0.267679,0.597502,0.215521,1.678988
+37,"A snake with wings","generated_from_prompts_serial/prompt_0037/img_00.jpg",0.289795,0.977307,0.288360,0.611709,0.229019,1.975617
+38,"A cloud shaped like a hand","generated_from_prompts_serial/prompt_0038/img_00.jpg",0.267822,0.958872,0.268035,0.606892,0.218693,0.510212
+39,"A cat with butterfly antennae","generated_from_prompts_serial/prompt_0039/img_00.jpg",0.294678,0.798047,0.280667,0.606316,0.235939,1.959265
+40,"A piano with rainbow keys","generated_from_prompts_serial/prompt_0040/img_00.jpg",0.280029,0.975879,0.326887,0.608370,0.229185,1.659978
+41,"A sandwich glowing in the dark","generated_from_prompts_serial/prompt_0041/img_00.jpg",0.309326,0.978619,0.310723,0.615778,0.235690,1.821282
+42,"A lamp with eyes","generated_from_prompts_serial/prompt_0042/img_00.jpg",0.283691,0.985157,0.311676,0.609467,0.229263,0.867634
+43,"A human face on a flower","generated_from_prompts_serial/prompt_0043/img_00.jpg",0.293213,0.975875,0.272114,0.612065,0.230044,1.977348
+44,"A turtle with rocket engines","generated_from_prompts_serial/prompt_0044/img_00.jpg",0.265625,0.950929,0.291274,0.622324,0.209927,1.312738
+45,"A cube-shaped watermelon","generated_from_prompts_serial/prompt_0045/img_00.jpg",0.268066,0.614878,0.325653,0.601198,0.210875,-1.925558
+46,"A spider web made of gold","generated_from_prompts_serial/prompt_0046/img_00.jpg",0.295898,0.748962,0.284493,0.608140,0.229045,1.004342
+47,"A fish with bird feathers","generated_from_prompts_serial/prompt_0047/img_00.jpg",0.281494,0.384030,0.258383,0.592340,0.209213,1.268947
+48,"A book that glows","generated_from_prompts_serial/prompt_0048/img_00.jpg",0.269775,0.958874,0.286212,0.608632,0.220655,1.827341
+49,"A horse with rainbow hair","generated_from_prompts_serial/prompt_0049/img_00.jpg",0.292236,0.972906,0.313879,0.615593,0.234296,1.882088
+50,"A rabbit with dragon horns","generated_from_prompts_serial/prompt_0050/img_00.jpg",0.294922,0.938489,0.243985,0.615733,0.242118,1.536951
+51,"A door in the middle of the desert","generated_from_prompts_serial/prompt_0051/img_00.jpg",0.298340,0.969468,0.335577,0.610876,0.235850,1.944470
+52,"A penguin with flamingo legs","generated_from_prompts_serial/prompt_0052/img_00.jpg",0.277588,0.759259,0.271116,0.604017,0.213074,1.887742
+53,"A banana with spikes","generated_from_prompts_serial/prompt_0053/img_00.jpg",0.268799,0.975878,0.272830,0.599578,0.223876,1.598447
+54,"A lizard with a crystal tail","generated_from_prompts_serial/prompt_0054/img_00.jpg",0.285645,0.695387,0.298665,0.612446,0.219398,1.450347
+55,"A river flowing upward","generated_from_prompts_serial/prompt_0055/img_00.jpg",0.257080,0.649439,0.250526,0.570792,0.209653,-0.412410
+56,"A cloud raining fire","generated_from_prompts_serial/prompt_0056/img_00.jpg",0.267334,0.824181,0.294419,0.613052,0.216655,1.595606
+57,"A dragonfly with human eyes","generated_from_prompts_serial/prompt_0057/img_00.jpg",0.264648,0.365012,0.284931,0.610350,0.215249,0.965638
+58,"A city floating in the sky","generated_from_prompts_serial/prompt_0058/img_00.jpg",0.283203,0.824178,0.250577,0.619122,0.227629,1.771715
+59,"A hat made of glass","generated_from_prompts_serial/prompt_0059/img_00.jpg",0.277100,0.839619,0.271834,0.610859,0.232258,1.422584
+60,"A watch with no hands","generated_from_prompts_serial/prompt_0060/img_00.jpg",0.277832,0.483567,0.225078,0.592883,0.215258,0.655816
+61,"A giraffe with two heads","generated_from_prompts_serial/prompt_0061/img_00.jpg",0.272461,0.147479,0.249340,0.585628,0.219549,0.580468
+62,"A wolf with glowing eyes","generated_from_prompts_serial/prompt_0062/img_00.jpg",0.304932,0.981131,0.277711,0.620054,0.245151,1.933408
+63,"A cake floating in space","generated_from_prompts_serial/prompt_0063/img_00.jpg",0.292725,0.881615,0.307521,0.620620,0.248266,1.766240
+64,"A bird with a fish tail","generated_from_prompts_serial/prompt_0064/img_00.jpg",0.286133,0.969466,0.278463,0.604937,0.217043,1.878148
+65,"A cat with scales","generated_from_prompts_serial/prompt_0065/img_00.jpg",0.278564,0.738793,0.305196,0.604875,0.220768,1.566298
+66,"A star shaped like a cube","generated_from_prompts_serial/prompt_0066/img_00.jpg",0.281250,0.898582,0.280445,0.607331,0.217284,1.199439
+67,"A tree with clocks instead of leaves","generated_from_prompts_serial/prompt_0067/img_00.jpg",0.300293,0.918542,0.334654,0.616501,0.233439,1.884253
+68,"A chair made of bones","generated_from_prompts_serial/prompt_0068/img_00.jpg",0.299316,0.971120,0.305672,0.632213,0.246380,1.744554
+69,"A violin floating in the air","generated_from_prompts_serial/prompt_0069/img_00.jpg",0.277344,0.909169,0.306511,0.611745,0.223544,1.885934
+70,"A rainbow made of fire","generated_from_prompts_serial/prompt_0070/img_00.jpg",0.274170,0.748958,0.303714,0.608360,0.215943,1.767529
+71,"A snail with glowing horns","generated_from_prompts_serial/prompt_0071/img_00.jpg",0.293945,0.944925,0.325224,0.618481,0.235962,1.694489
+72,"A train made of wood","generated_from_prompts_serial/prompt_0072/img_00.jpg",0.293945,0.971126,0.311581,0.604581,0.242151,1.486026
+73,"A rabbit with butterfly wings","generated_from_prompts_serial/prompt_0073/img_00.jpg",0.290039,0.985213,0.289078,0.609670,0.240472,1.997278
+74,"A dog with human ears","generated_from_prompts_serial/prompt_0074/img_00.jpg",0.291992,0.506773,0.292672,0.603189,0.212903,1.262178
+75,"A spider with a smiley face","generated_from_prompts_serial/prompt_0075/img_00.jpg",0.315918,0.986900,0.321466,0.609540,0.251008,1.950829
+76,"A sun that is black","generated_from_prompts_serial/prompt_0076/img_00.jpg",0.270996,0.113963,0.223534,0.590238,0.214794,0.089896
+77,"A moon with rainbow colors","generated_from_prompts_serial/prompt_0077/img_00.jpg",0.289307,0.601809,0.302930,0.598506,0.229940,1.820470
+78,"A bridge made of glass","generated_from_prompts_serial/prompt_0078/img_00.jpg",0.287842,0.950949,0.296810,0.603347,0.237531,0.638957
+79,"A door on a cloud","generated_from_prompts_serial/prompt_0079/img_00.jpg",0.291504,0.978624,0.283073,0.622533,0.232864,1.969957
+80,"A fish with glowing eyes","generated_from_prompts_serial/prompt_0080/img_00.jpg",0.281250,0.977308,0.279540,0.622044,0.231184,1.858109
+81,"A chair shaped like a hand","generated_from_prompts_serial/prompt_0081/img_00.jpg",0.278076,0.961218,0.278905,0.622315,0.223565,-1.756382
+82,"A bird with no wings","generated_from_prompts_serial/prompt_0082/img_00.jpg",0.294922,0.133236,0.232571,0.584093,0.221010,0.461946
+83,"A car with wings","generated_from_prompts_serial/prompt_0083/img_00.jpg",0.294678,0.903861,0.297371,0.609289,0.225829,1.912736
+84,"A dragon breathing water","generated_from_prompts_serial/prompt_0084/img_00.jpg",0.287109,0.806658,0.294391,0.607456,0.225303,1.162080
+85,"A flower made of metal","generated_from_prompts_serial/prompt_0085/img_00.jpg",0.289307,0.963568,0.280395,0.592996,0.229233,1.751847
+86,"A crystal shaped like a heart","generated_from_prompts_serial/prompt_0086/img_00.jpg",0.261963,0.198456,0.233702,0.589516,0.206045,-1.459948
+87,"A mountain with a door","generated_from_prompts_serial/prompt_0087/img_00.jpg",0.259033,0.155770,0.258185,0.579652,0.210829,-1.439751
+88,"A dog with two tails","generated_from_prompts_serial/prompt_0088/img_00.jpg",0.292236,0.405616,0.266302,0.587018,0.216502,0.708507
+89,"A fox with rainbow fur","generated_from_prompts_serial/prompt_0089/img_00.jpg",0.307617,0.969345,0.337036,0.614292,0.251634,1.975673
+90,"A shoe made of fire","generated_from_prompts_serial/prompt_0090/img_00.jpg",0.272461,0.918539,0.286026,0.620520,0.229099,1.772520
+91,"A tree with candy leaves","generated_from_prompts_serial/prompt_0091/img_00.jpg",0.282959,0.914072,0.280449,0.598894,0.225244,0.767557
+92,"A spider with rainbow legs","generated_from_prompts_serial/prompt_0092/img_00.jpg",0.288086,0.963332,0.344256,0.614297,0.243835,1.757213
+93,"A fish flying with balloons","generated_from_prompts_serial/prompt_0093/img_00.jpg",0.293701,0.965451,0.297297,0.611498,0.235165,1.886696
+94,"A lamp shaped like the moon","generated_from_prompts_serial/prompt_0094/img_00.jpg",0.276123,0.923041,0.298312,0.609744,0.223000,0.573523
+95,"A star made of ice","generated_from_prompts_serial/prompt_0095/img_00.jpg",0.265381,0.953738,0.301815,0.615728,0.230063,1.869185
+96,"A castle floating on a cloud","generated_from_prompts_serial/prompt_0096/img_00.jpg",0.298096,0.941703,0.314804,0.615397,0.246456,1.825265
+97,"A human hand made of stone","generated_from_prompts_serial/prompt_0097/img_00.jpg",0.273682,0.950947,0.246941,0.614667,0.228470,0.586232
+98,"A cat with four tails","generated_from_prompts_serial/prompt_0098/img_00.jpg",0.280273,0.438572,0.298413,0.607950,0.226304,1.701166
+99,"Two suns in the sky","generated_from_prompts_serial/prompt_0099/img_00.jpg",0.255371,0.334957,0.249003,0.590864,0.203889,0.347110
+100,"A green ocean","generated_from_prompts_serial/prompt_0100/img_00.jpg",0.283203,0.875628,0.239348,0.576904,0.224780,0.491978
+101,"Three moons above a city","generated_from_prompts_serial/prompt_0101/img_00.jpg",0.296387,0.590167,0.315372,0.621897,0.237481,1.851076
+102,"A red snowman","generated_from_prompts_serial/prompt_0102/img_00.jpg",0.276367,0.176509,0.265378,0.590421,0.221351,-1.382021
+103,"A chair with three legs","generated_from_prompts_serial/prompt_0103/img_00.jpg",0.297119,0.779560,0.256166,0.605467,0.242070,1.296019
+104,"Two blue apples","generated_from_prompts_serial/prompt_0104/img_00.jpg",0.269287,0.472365,0.266437,0.600469,0.213772,-0.542329
+105,"A black rainbow","generated_from_prompts_serial/prompt_0105/img_00.jpg",0.273438,0.193858,0.247849,0.590455,0.220040,-0.639908
+106,"Four eyes on one hand","generated_from_prompts_serial/prompt_0106/img_00.jpg",0.285645,0.953734,0.239578,0.605983,0.217422,1.579511
+107,"A yellow forest","generated_from_prompts_serial/prompt_0107/img_00.jpg",0.282227,0.839619,0.285932,0.592557,0.210969,0.869948
+108,"Three doors on one wall","generated_from_prompts_serial/prompt_0108/img_00.jpg",0.241821,0.245060,0.259170,0.573473,0.206748,-0.939272
+109,"A cow with two heads","generated_from_prompts_serial/prompt_0109/img_00.jpg",0.284424,0.728754,0.264918,0.587718,0.221944,0.724383
+110,"A purple tree","generated_from_prompts_serial/prompt_0110/img_00.jpg",0.296875,0.979939,0.327465,0.592305,0.236885,1.609849
+111,"Four shoes on one foot","generated_from_prompts_serial/prompt_0111/img_00.jpg",0.258789,0.518784,0.226502,0.592942,0.210891,-0.796575
+112,"A silver river","generated_from_prompts_serial/prompt_0112/img_00.jpg",0.237183,0.448977,0.217097,0.550766,0.200831,-0.057600
+113,"Two clocks on one tower","generated_from_prompts_serial/prompt_0113/img_00.jpg",0.275146,0.565347,0.224562,0.570324,0.217752,-0.612831
+114,"A red cloud","generated_from_prompts_serial/prompt_0114/img_00.jpg",0.262207,0.931191,0.249748,0.601731,0.212990,0.723795
+115,"Five fingers but all thumbs","generated_from_prompts_serial/prompt_0115/img_00.jpg",0.252441,0.717463,0.233707,0.599722,0.206961,-0.524018
+116,"Three golden birds in a cage","generated_from_prompts_serial/prompt_0116/img_00.jpg",0.299316,0.965453,0.343864,0.609286,0.234434,0.520462
+117,"A pink desert","generated_from_prompts_serial/prompt_0117/img_00.jpg",0.262939,0.898584,0.288860,0.596353,0.218595,1.539145
+118,"A cat with two noses","generated_from_prompts_serial/prompt_0118/img_00.jpg",0.292969,0.317130,0.224117,0.577321,0.217520,-0.191203
+119,"Two green suns","generated_from_prompts_serial/prompt_0119/img_00.jpg",0.276855,0.258834,0.311352,0.581322,0.210733,-0.738952
+120,"A staircase going in circles","generated_from_prompts_serial/prompt_0120/img_00.jpg",0.272705,0.893333,0.257903,0.595148,0.213667,-0.011901
+121,"Three mountains floating in the sky","generated_from_prompts_serial/prompt_0121/img_00.jpg",0.260742,0.483567,0.250274,0.601785,0.218655,-0.031810
+122,"A white fire","generated_from_prompts_serial/prompt_0122/img_00.jpg",0.247192,0.334957,0.226268,0.566100,0.200080,-0.138242
+123,"Four black stars","generated_from_prompts_serial/prompt_0123/img_00.jpg",0.249512,0.405617,0.259722,0.592855,0.204716,-0.518915
+124,"A dog with three ears","generated_from_prompts_serial/prompt_0124/img_00.jpg",0.302246,0.176510,0.273459,0.593880,0.225038,1.673637
+125,"A blue banana","generated_from_prompts_serial/prompt_0125/img_00.jpg",0.263428,0.903860,0.299985,0.593648,0.217855,-1.662072
+126,"Two purple fish flying","generated_from_prompts_serial/prompt_0126/img_00.jpg",0.303955,0.934836,0.316746,0.609521,0.242311,1.918377
+127,"A green moon","generated_from_prompts_serial/prompt_0127/img_00.jpg",0.268555,0.950948,0.278715,0.587750,0.219087,-0.398948
+128,"Three windows stacked vertically","generated_from_prompts_serial/prompt_0128/img_00.jpg",0.258057,0.759274,0.226604,0.574474,0.213539,-1.116642
+129,"A red tree with no leaves","generated_from_prompts_serial/prompt_0129/img_00.jpg",0.286621,0.788749,0.292245,0.597358,0.225344,1.135425
+130,"Four candles burning ice","generated_from_prompts_serial/prompt_0130/img_00.jpg",0.249756,0.854509,0.280570,0.601139,0.206470,0.237167
+131,"A silver apple","generated_from_prompts_serial/prompt_0131/img_00.jpg",0.285400,0.972906,0.320504,0.602692,0.221502,1.662689
+132,"Two chairs upside down","generated_from_prompts_serial/prompt_0132/img_00.jpg",0.271240,0.881629,0.252795,0.600569,0.222342,0.807756
+133,"A yellow river flowing upward","generated_from_prompts_serial/prompt_0133/img_00.jpg",0.272461,0.759269,0.329979,0.616299,0.220264,1.449712
+134,"Five eyes on one face","generated_from_prompts_serial/prompt_0134/img_00.jpg",0.266846,0.554406,0.183843,0.562886,0.199057,0.458562
+135,"A pink mountain","generated_from_prompts_serial/prompt_0135/img_00.jpg",0.287109,0.978624,0.313577,0.597220,0.232402,1.805106
+136,"Two golden turtles","generated_from_prompts_serial/prompt_0136/img_00.jpg",0.262207,0.971126,0.315987,0.607971,0.205530,0.593315
+137,"Three doors in the sky","generated_from_prompts_serial/prompt_0137/img_00.jpg",0.264160,0.416861,0.245264,0.613920,0.214347,1.723070
+138,"A black ocean with glowing waves","generated_from_prompts_serial/prompt_0138/img_00.jpg",0.285645,0.554413,0.253862,0.614288,0.231671,-0.646780
+139,"Four birds with square wings","generated_from_prompts_serial/prompt_0139/img_00.jpg",0.273438,0.506774,0.292037,0.590972,0.209551,0.060318
+140,"A green cloud raining sand","generated_from_prompts_serial/prompt_0140/img_00.jpg",0.293457,0.578754,0.276905,0.622965,0.233506,1.944580
+141,"Two suns side by side","generated_from_prompts_serial/prompt_0141/img_00.jpg",0.268555,0.601808,0.272853,0.600585,0.204373,-0.618588
+142,"A red giraffe","generated_from_prompts_serial/prompt_0142/img_00.jpg",0.287842,0.887681,0.292617,0.587554,0.216687,0.304141
+143,"Three hands on one arm","generated_from_prompts_serial/prompt_0143/img_00.jpg",0.256592,0.684605,0.218929,0.573977,0.207345,0.344175
+144,"A blue spider web","generated_from_prompts_serial/prompt_0144/img_00.jpg",0.297363,0.934834,0.276938,0.606476,0.227044,0.843652
+145,"Two moons stacked vertically","generated_from_prompts_serial/prompt_0145/img_00.jpg",0.285400,0.759270,0.290009,0.605217,0.222519,0.771658
+146,"Four flying rabbits","generated_from_prompts_serial/prompt_0146/img_00.jpg",0.283447,0.862050,0.305373,0.608639,0.225804,1.647409
+147,"A golden tree with crystal leaves","generated_from_prompts_serial/prompt_0147/img_00.jpg",0.296631,0.956303,0.299493,0.609270,0.244379,1.366185
+AVERAGE,,,0.281168,0.741178,0.279978,0.603046,0.224261,0.979690

@@ -1,0 +1,150 @@
+prompt_idx,prompt,image_path,HPSv2Score,VQAScore,CLIPScore,ITMScore,PickScore,ImageReward
+0,"A cat with three eyes","generated_samples_batch/0000_A_cat_with_three_eyes/00.jpg",0.281738,0.224877,0.230276,0.589135,0.221093,1.011991
+1,"A hand with only two fingers","generated_samples_batch/0001_A_hand_with_only_two_fingers/00.jpg",0.271484,0.518791,0.269298,0.596341,0.213386,-0.361327
+2,"A cat walking on two legs","generated_samples_batch/0002_A_cat_walking_on_two_legs/00.jpg",0.293457,0.927106,0.264520,0.596390,0.228636,1.682804
+3,"A blue apple","generated_samples_batch/0003_A_blue_apple/00.jpg",0.288086,0.967576,0.327916,0.605451,0.229335,1.897480
+4,"Eyes stacked vertically on a face","generated_samples_batch/0004_Eyes_stacked_vertically_on_a_face/00.jpg",0.263916,0.728762,0.184627,0.583750,0.204873,0.298151
+5,"A dog with butterfly wings","generated_samples_batch/0005_A_dog_with_butterfly_wings/00.jpg",0.303711,0.979938,0.329263,0.611311,0.230340,2.002268
+6,"A fish swimming in the sky","generated_samples_batch/0006_A_fish_swimming_in_the_sky/00.jpg",0.299561,0.815374,0.281000,0.606131,0.235618,1.758175
+7,"A chair made of clouds","generated_samples_batch/0007_A_chair_made_of_clouds/00.jpg",0.295410,0.918539,0.339304,0.626097,0.241392,1.947570
+8,"A clock with melting numbers","generated_samples_batch/0008_A_clock_with_melting_numbers/00.jpg",0.270264,0.944930,0.242223,0.599685,0.229545,1.690979
+9,"A tree with glowing leaves","generated_samples_batch/0009_A_tree_with_glowing_leaves/00.jpg",0.290771,0.978623,0.297351,0.617310,0.234962,1.603968
+10,"A horse with zebra stripes","generated_samples_batch/0010_A_horse_with_zebra_stripes/00.jpg",0.288574,0.967577,0.312089,0.596657,0.224874,1.786178
+11,"A spider with one giant leg","generated_samples_batch/0011_A_spider_with_one_giant_leg/00.jpg",0.280273,0.472362,0.274097,0.602441,0.228901,1.222841
+12,"A bicycle with square wheels","generated_samples_batch/0012_A_bicycle_with_square_wheels/00.jpg",0.274902,0.578753,0.225153,0.586869,0.216409,0.074366
+13,"A candle burning upside down","generated_samples_batch/0013_A_candle_burning_upside_down/00.jpg",0.281250,0.384024,0.242699,0.604649,0.218686,0.209550
+14,"A snail with a transparent shell","generated_samples_batch/0014_A_snail_with_a_transparent_shell/00.jpg",0.292236,0.948166,0.321903,0.611185,0.238399,1.755764
+15,"A mountain floating in the ocean","generated_samples_batch/0015_A_mountain_floating_in_the_ocean/00.jpg",0.292969,0.941705,0.312881,0.621259,0.238520,1.348624
+16,"A bird with four wings","generated_samples_batch/0016_A_bird_with_four_wings/00.jpg",0.291748,0.405616,0.251771,0.587225,0.221478,1.294672
+17,"A mirror reflecting the wrong person","generated_samples_batch/0017_A_mirror_reflecting_the_wrong_person/00.jpg",0.263672,0.334954,0.223598,0.579005,0.203459,0.966895
+18,"A frog with fur","generated_samples_batch/0018_A_frog_with_fur/00.jpg",0.278320,0.948164,0.278320,0.608645,0.219905,1.612561
+19,"A tiger with polka dots","generated_samples_batch/0019_A_tiger_with_polka_dots/00.jpg",0.276611,0.887681,0.248377,0.598941,0.214428,1.599110
+20,"A shoe made of glass","generated_samples_batch/0020_A_shoe_made_of_glass/00.jpg",0.303955,0.974449,0.312788,0.628296,0.248694,1.735651
+21,"A violin made of ice","generated_samples_batch/0021_A_violin_made_of_ice/00.jpg",0.280762,0.948158,0.356500,0.616045,0.224730,1.739068
+22,"A house shaped like a shoe","generated_samples_batch/0022_A_house_shaped_like_a_shoe/00.jpg",0.290527,0.448976,0.277209,0.601444,0.230550,1.785719
+23,"A rainbow in grayscale","generated_samples_batch/0023_A_rainbow_in_grayscale/00.jpg",0.287354,0.706338,0.267010,0.616178,0.229251,1.469844
+24,"A sun with a face","generated_samples_batch/0024_A_sun_with_a_face/00.jpg",0.283203,0.975876,0.277952,0.618395,0.220395,1.862851
+25,"A moon shaped like a cube","generated_samples_batch/0025_A_moon_shaped_like_a_cube/00.jpg",0.292480,0.798045,0.293004,0.610664,0.233391,1.824021
+26,"A lion with feathers","generated_samples_batch/0026_A_lion_with_feathers/00.jpg",0.283203,0.649442,0.258326,0.605180,0.214841,1.557420
+27,"A car with spider legs","generated_samples_batch/0027_A_car_with_spider_legs/00.jpg",0.289551,0.985155,0.294896,0.621679,0.234949,1.834116
+28,"A fish with human arms","generated_samples_batch/0028_A_fish_with_human_arms/00.jpg",0.286621,0.887677,0.298355,0.615373,0.227809,0.381994
+29,"A dog with a giraffe neck","generated_samples_batch/0029_A_dog_with_a_giraffe_neck/00.jpg",0.281738,0.375132,0.240944,0.581419,0.217021,1.258095
+30,"A tree growing upside down","generated_samples_batch/0030_A_tree_growing_upside_down/00.jpg",0.262451,0.759266,0.247784,0.599410,0.215833,0.143134
+31,"A butterfly with transparent wings","generated_samples_batch/0031_A_butterfly_with_transparent_wings/00.jpg",0.275635,0.748962,0.292285,0.604275,0.211905,1.450192
+32,"A candle with water instead of fire","generated_samples_batch/0032_A_candle_with_water_instead_of_fire/00.jpg",0.271729,0.100572,0.249753,0.604805,0.219869,-0.541904
+33,"A robot with a flower head","generated_samples_batch/0033_A_robot_with_a_flower_head/00.jpg",0.292236,0.975879,0.297826,0.615829,0.231733,1.355419
+34,"A dragon made of paper","generated_samples_batch/0034_A_dragon_made_of_paper/00.jpg",0.290527,0.979936,0.316009,0.614804,0.228030,1.841001
+35,"A jellyfish floating in space","generated_samples_batch/0035_A_jellyfish_floating_in_space/00.jpg",0.285889,0.868806,0.267560,0.608643,0.234090,-0.125209
+36,"A cactus with fur","generated_samples_batch/0036_A_cactus_with_fur/00.jpg",0.275146,0.923042,0.270071,0.599586,0.212212,1.584293
+37,"A snake with wings","generated_samples_batch/0037_A_snake_with_wings/00.jpg",0.285400,0.931183,0.284683,0.612540,0.232579,1.834328
+38,"A cloud shaped like a hand","generated_samples_batch/0038_A_cloud_shaped_like_a_hand/00.jpg",0.265137,0.953736,0.258911,0.602903,0.215128,0.456907
+39,"A cat with butterfly antennae","generated_samples_batch/0039_A_cat_with_butterfly_antennae/00.jpg",0.280273,0.934833,0.269323,0.608818,0.231099,1.969441
+40,"A piano with rainbow keys","generated_samples_batch/0040_A_piano_with_rainbow_keys/00.jpg",0.275391,0.984255,0.326118,0.606425,0.224614,1.806682
+41,"A sandwich glowing in the dark","generated_samples_batch/0041_A_sandwich_glowing_in_the_dark/00.jpg",0.287842,0.958865,0.349962,0.617740,0.232435,1.557527
+42,"A lamp with eyes","generated_samples_batch/0042_A_lamp_with_eyes/00.jpg",0.299561,0.990946,0.310764,0.620562,0.230548,1.766469
+43,"A human face on a flower","generated_samples_batch/0043_A_human_face_on_a_flower/00.jpg",0.287842,0.978620,0.303899,0.615573,0.229436,1.974270
+44,"A turtle with rocket engines","generated_samples_batch/0044_A_turtle_with_rocket_engines/00.jpg",0.267090,0.839611,0.298512,0.613997,0.214947,1.793844
+45,"A cube-shaped watermelon","generated_samples_batch/0045_A_cube-shaped_watermelon/00.jpg",0.272949,0.230212,0.298322,0.594777,0.219936,-1.958301
+46,"A spider web made of gold","generated_samples_batch/0046_A_spider_web_made_of_gold/00.jpg",0.295654,0.769722,0.292156,0.609766,0.225806,1.422997
+47,"A fish with bird feathers","generated_samples_batch/0047_A_fish_with_bird_feathers/00.jpg",0.273926,0.260865,0.257521,0.590721,0.211854,1.884327
+48,"A book that glows","generated_samples_batch/0048_A_book_that_glows/00.jpg",0.263916,0.974451,0.340371,0.611150,0.216027,1.664366
+49,"A horse with rainbow hair","generated_samples_batch/0049_A_horse_with_rainbow_hair/00.jpg",0.294922,0.985156,0.322092,0.616422,0.237945,1.891304
+50,"A rabbit with dragon horns","generated_samples_batch/0050_A_rabbit_with_dragon_horns/00.jpg",0.289062,0.953735,0.262897,0.619778,0.240535,1.762374
+51,"A door in the middle of the desert","generated_samples_batch/0051_A_door_in_the_middle_of_the_desert/00.jpg",0.286377,0.969468,0.305735,0.613375,0.236084,1.939385
+52,"A penguin with flamingo legs","generated_samples_batch/0052_A_penguin_with_flamingo_legs/00.jpg",0.280029,0.531089,0.230305,0.596826,0.213423,1.696928
+53,"A banana with spikes","generated_samples_batch/0053_A_banana_with_spikes/00.jpg",0.274170,0.987684,0.256278,0.597690,0.221558,1.794650
+54,"A lizard with a crystal tail","generated_samples_batch/0054_A_lizard_with_a_crystal_tail/00.jpg",0.294678,0.934833,0.330983,0.615878,0.218569,1.451835
+55,"A river flowing upward","generated_samples_batch/0055_A_river_flowing_upward/00.jpg",0.248169,0.334957,0.225482,0.547954,0.205182,-2.239556
+56,"A cloud raining fire","generated_samples_batch/0056_A_cloud_raining_fire/00.jpg",0.262451,0.638123,0.248374,0.614935,0.214438,0.755960
+57,"A dragonfly with human eyes","generated_samples_batch/0057_A_dragonfly_with_human_eyes/00.jpg",0.261230,0.847852,0.296304,0.605769,0.210023,0.805200
+58,"A city floating in the sky","generated_samples_batch/0058_A_city_floating_in_the_sky/00.jpg",0.289307,0.798041,0.244639,0.621782,0.232926,1.851331
+59,"A hat made of glass","generated_samples_batch/0059_A_hat_made_of_glass/00.jpg",0.261719,0.531095,0.238220,0.582955,0.215713,1.116589
+60,"A watch with no hands","generated_samples_batch/0060_A_watch_with_no_hands/00.jpg",0.277100,0.459624,0.242120,0.592776,0.217217,0.519943
+61,"A giraffe with two heads","generated_samples_batch/0061_A_giraffe_with_two_heads/00.jpg",0.268799,0.193855,0.253589,0.587123,0.213359,0.424420
+62,"A wolf with glowing eyes","generated_samples_batch/0062_A_wolf_with_glowing_eyes/00.jpg",0.306641,0.981131,0.286489,0.617254,0.247039,1.920670
+63,"A cake floating in space","generated_samples_batch/0063_A_cake_floating_in_space/00.jpg",0.303467,0.893322,0.316096,0.624328,0.241311,1.823562
+64,"A bird with a fish tail","generated_samples_batch/0064_A_bird_with_a_fish_tail/00.jpg",0.291748,0.967576,0.274261,0.602473,0.217647,1.802470
+65,"A cat with scales","generated_samples_batch/0065_A_cat_with_scales/00.jpg",0.278076,0.672679,0.286764,0.606976,0.221092,1.855348
+66,"A star shaped like a cube","generated_samples_batch/0066_A_star_shaped_like_a_cube/00.jpg",0.270264,0.660957,0.261084,0.597274,0.211327,0.684578
+67,"A tree with clocks instead of leaves","generated_samples_batch/0067_A_tree_with_clocks_instead_of_leaves/00.jpg",0.299805,0.938490,0.283952,0.612150,0.235492,1.807341
+68,"A chair made of bones","generated_samples_batch/0068_A_chair_made_of_bones/00.jpg",0.275879,0.923035,0.307188,0.614251,0.227682,0.134024
+69,"A violin floating in the air","generated_samples_batch/0069_A_violin_floating_in_the_air/00.jpg",0.270264,0.438564,0.299984,0.603985,0.215383,0.994853
+70,"A rainbow made of fire","generated_samples_batch/0070_A_rainbow_made_of_fire/00.jpg",0.264160,0.649437,0.290162,0.606424,0.211517,1.698383
+71,"A snail with glowing horns","generated_samples_batch/0071_A_snail_with_glowing_horns/00.jpg",0.297363,0.974447,0.325333,0.617593,0.237019,1.867562
+72,"A train made of wood","generated_samples_batch/0072_A_train_made_of_wood/00.jpg",0.290527,0.974451,0.332490,0.598095,0.239622,1.332147
+73,"A rabbit with butterfly wings","generated_samples_batch/0073_A_rabbit_with_butterfly_wings/00.jpg",0.293457,0.983289,0.294912,0.609165,0.245278,2.002099
+74,"A dog with human ears","generated_samples_batch/0074_A_dog_with_human_ears/00.jpg",0.294678,0.405617,0.262523,0.598046,0.220120,1.152105
+75,"A spider with a smiley face","generated_samples_batch/0075_A_spider_with_a_smiley_face/00.jpg",0.293701,0.985155,0.340023,0.613210,0.246736,1.892267
+76,"A sun that is black","generated_samples_batch/0076_A_sun_that_is_black/00.jpg",0.263428,0.119433,0.225371,0.583912,0.205535,-0.140954
+77,"A moon with rainbow colors","generated_samples_batch/0077_A_moon_with_rainbow_colors/00.jpg",0.293701,0.909176,0.310116,0.599052,0.235813,1.696663
+78,"A bridge made of glass","generated_samples_batch/0078_A_bridge_made_of_glass/00.jpg",0.282227,0.927107,0.310957,0.609314,0.231294,-0.030945
+79,"A door on a cloud","generated_samples_batch/0079_A_door_on_a_cloud/00.jpg",0.290039,0.975879,0.291831,0.619397,0.238266,1.954836
+80,"A fish with glowing eyes","generated_samples_batch/0080_A_fish_with_glowing_eyes/00.jpg",0.283447,0.963330,0.282313,0.616138,0.233495,1.743425
+81,"A chair shaped like a hand","generated_samples_batch/0081_A_chair_shaped_like_a_hand/00.jpg",0.285400,0.958873,0.321507,0.622195,0.232517,-0.232632
+82,"A bird with no wings","generated_samples_batch/0082_A_bird_with_no_wings/00.jpg",0.291748,0.152161,0.246288,0.584300,0.224025,0.653046
+83,"A car with wings","generated_samples_batch/0083_A_car_with_wings/00.jpg",0.305908,0.986059,0.299534,0.607079,0.236696,1.905685
+84,"A dragon breathing water","generated_samples_batch/0084_A_dragon_breathing_water/00.jpg",0.288574,0.958868,0.321381,0.612386,0.225360,1.246904
+85,"A flower made of metal","generated_samples_batch/0085_A_flower_made_of_metal/00.jpg",0.294678,0.832270,0.294141,0.613197,0.230977,1.827110
+86,"A crystal shaped like a heart","generated_samples_batch/0086_A_crystal_shaped_like_a_heart/00.jpg",0.258301,0.260865,0.223000,0.587444,0.203749,-1.772364
+87,"A mountain with a door","generated_samples_batch/0087_A_mountain_with_a_door/00.jpg",0.262695,0.176510,0.250591,0.599521,0.212058,-1.239254
+88,"A dog with two tails","generated_samples_batch/0088_A_dog_with_two_tails/00.jpg",0.282715,0.353784,0.247268,0.585229,0.211589,1.256629
+89,"A fox with rainbow fur","generated_samples_batch/0089_A_fox_with_rainbow_fur/00.jpg",0.297363,0.969347,0.338379,0.617070,0.250232,1.914883
+90,"A shoe made of fire","generated_samples_batch/0090_A_shoe_made_of_fire/00.jpg",0.276123,0.941700,0.314422,0.619157,0.233112,1.896446
+91,"A tree with candy leaves","generated_samples_batch/0091_A_tree_with_candy_leaves/00.jpg",0.274414,0.927107,0.291732,0.604506,0.224199,0.933550
+92,"A spider with rainbow legs","generated_samples_batch/0092_A_spider_with_rainbow_legs/00.jpg",0.288330,0.967574,0.351555,0.611863,0.243949,1.818587
+93,"A fish flying with balloons","generated_samples_batch/0093_A_fish_flying_with_balloons/00.jpg",0.289062,0.965451,0.314791,0.611757,0.235247,1.883867
+94,"A lamp shaped like the moon","generated_samples_batch/0094_A_lamp_shaped_like_the_moon/00.jpg",0.253906,0.554412,0.223670,0.588787,0.209457,-1.487401
+95,"A star made of ice","generated_samples_batch/0095_A_star_made_of_ice/00.jpg",0.269287,0.971125,0.309322,0.622216,0.228072,1.944173
+96,"A castle floating on a cloud","generated_samples_batch/0096_A_castle_floating_on_a_cloud/00.jpg",0.291016,0.887674,0.297417,0.617400,0.245815,1.752947
+97,"A human hand made of stone","generated_samples_batch/0097_A_human_hand_made_of_stone/00.jpg",0.276855,0.961216,0.232697,0.608085,0.230168,0.595134
+98,"A cat with four tails","generated_samples_batch/0098_A_cat_with_four_tails/00.jpg",0.275879,0.649432,0.292303,0.599446,0.230966,0.620820
+99,"Two suns in the sky","generated_samples_batch/0099_Two_suns_in_the_sky/00.jpg",0.261963,0.375134,0.244402,0.602274,0.208030,0.565092
+100,"A green ocean","generated_samples_batch/0100_A_green_ocean/00.jpg",0.273682,0.472366,0.260616,0.571420,0.220547,-0.660222
+101,"Three moons above a city","generated_samples_batch/0101_Three_moons_above_a_city/00.jpg",0.283203,0.309784,0.312692,0.627876,0.239800,1.846897
+102,"A red snowman","generated_samples_batch/0102_A_red_snowman/00.jpg",0.286621,0.738792,0.297952,0.601860,0.221015,0.844260
+103,"A chair with three legs","generated_samples_batch/0103_A_chair_with_three_legs/00.jpg",0.275391,0.495035,0.258804,0.596503,0.234515,0.399901
+104,"Two blue apples","generated_samples_batch/0104_Two_blue_apples/00.jpg",0.281250,0.934836,0.312445,0.610320,0.228212,1.528965
+105,"A black rainbow","generated_samples_batch/0105_A_black_rainbow/00.jpg",0.271484,0.204755,0.260403,0.594270,0.218742,-0.529616
+106,"Four eyes on one hand","generated_samples_batch/0106_Four_eyes_on_one_hand/00.jpg",0.251221,0.601806,0.208776,0.577297,0.197566,-2.251523
+107,"A yellow forest","generated_samples_batch/0107_A_yellow_forest/00.jpg",0.267578,0.909176,0.287448,0.579478,0.217222,0.290017
+108,"Three doors on one wall","generated_samples_batch/0108_Three_doors_on_one_wall/00.jpg",0.263184,0.506775,0.236713,0.577311,0.214398,-0.038188
+109,"A cow with two heads","generated_samples_batch/0109_A_cow_with_two_heads/00.jpg",0.280518,0.112196,0.235312,0.582609,0.219087,1.073595
+110,"A purple tree","generated_samples_batch/0110_A_purple_tree/00.jpg",0.285400,0.977311,0.328454,0.592346,0.235449,1.707909
+111,"Four shoes on one foot","generated_samples_batch/0111_Four_shoes_on_one_foot/00.jpg",0.250977,0.405615,0.240074,0.581870,0.206184,-0.595270
+112,"A silver river","generated_samples_batch/0112_A_silver_river/00.jpg",0.230347,0.416861,0.184490,0.531343,0.195697,-2.105666
+113,"Two clocks on one tower","generated_samples_batch/0113_Two_clocks_on_one_tower/00.jpg",0.270752,0.176510,0.197038,0.562326,0.209418,-0.960713
+114,"A red cloud","generated_samples_batch/0114_A_red_cloud/00.jpg",0.257812,0.327198,0.234085,0.585976,0.210625,0.439567
+115,"Five fingers but all thumbs","generated_samples_batch/0115_Five_fingers_but_all_thumbs/00.jpg",0.242554,0.672679,0.173997,0.600343,0.201908,-0.443836
+116,"Three golden birds in a cage","generated_samples_batch/0116_Three_golden_birds_in_a_cage/00.jpg",0.272705,0.198455,0.307189,0.609153,0.212913,0.937405
+117,"A pink desert","generated_samples_batch/0117_A_pink_desert/00.jpg",0.259277,0.927108,0.258687,0.596743,0.219895,1.099498
+118,"A cat with two noses","generated_samples_batch/0118_A_cat_with_two_noses/00.jpg",0.293457,0.230211,0.219126,0.578412,0.217103,0.066490
+119,"Two green suns","generated_samples_batch/0119_Two_green_suns/00.jpg",0.266846,0.176510,0.291510,0.587966,0.211061,0.822081
+120,"A staircase going in circles","generated_samples_batch/0120_A_staircase_going_in_circles/00.jpg",0.271729,0.941707,0.257410,0.605067,0.216482,0.860276
+121,"Three mountains floating in the sky","generated_samples_batch/0121_Three_mountains_floating_in_the_sky/00.jpg",0.260742,0.565344,0.265662,0.601865,0.217981,0.683400
+122,"A white fire","generated_samples_batch/0122_A_white_fire/00.jpg",0.251465,0.291015,0.242558,0.578830,0.204503,-0.408981
+123,"Four black stars","generated_samples_batch/0123_Four_black_stars/00.jpg",0.261230,0.728761,0.236022,0.591687,0.210697,0.098833
+124,"A dog with three ears","generated_samples_batch/0124_A_dog_with_three_ears/00.jpg",0.299805,0.204755,0.263439,0.588916,0.231210,1.604439
+125,"A blue banana","generated_samples_batch/0125_A_blue_banana/00.jpg",0.258789,0.963333,0.261983,0.575200,0.218309,-1.825380
+126,"Two purple fish flying","generated_samples_batch/0126_Two_purple_fish_flying/00.jpg",0.293945,0.963332,0.320383,0.611356,0.233288,1.587493
+127,"A green moon","generated_samples_batch/0127_A_green_moon/00.jpg",0.263184,0.165816,0.235907,0.580684,0.215755,-1.464800
+128,"Three windows stacked vertically","generated_samples_batch/0128_Three_windows_stacked_vertically/00.jpg",0.227417,0.073580,0.147899,0.531160,0.194581,-2.273932
+129,"A red tree with no leaves","generated_samples_batch/0129_A_red_tree_with_no_leaves/00.jpg",0.287842,0.649441,0.296036,0.596698,0.229974,1.280318
+130,"Four candles burning ice","generated_samples_batch/0130_Four_candles_burning_ice/00.jpg",0.247803,0.706340,0.302436,0.595164,0.202024,-0.461126
+131,"A silver apple","generated_samples_batch/0131_A_silver_apple/00.jpg",0.254639,0.518792,0.234389,0.588941,0.205092,-2.253346
+132,"Two chairs upside down","generated_samples_batch/0132_Two_chairs_upside_down/00.jpg",0.260498,0.875627,0.184907,0.588293,0.216729,-2.060421
+133,"A yellow river flowing upward","generated_samples_batch/0133_A_yellow_river_flowing_upward/00.jpg",0.259766,0.613679,0.249145,0.595457,0.212050,-1.445943
+134,"Five eyes on one face","generated_samples_batch/0134_Five_eyes_on_one_face/00.jpg",0.261719,0.649433,0.207087,0.568159,0.201439,0.047569
+135,"A pink mountain","generated_samples_batch/0135_A_pink_mountain/00.jpg",0.271973,0.978624,0.318077,0.597787,0.226214,1.752805
+136,"Two golden turtles","generated_samples_batch/0136_Two_golden_turtles/00.jpg",0.272705,0.927106,0.314481,0.607452,0.213397,0.827795
+137,"Three doors in the sky","generated_samples_batch/0137_Three_doors_in_the_sky/00.jpg",0.260254,0.327198,0.255299,0.608167,0.214481,1.678753
+138,"A black ocean with glowing waves","generated_samples_batch/0138_A_black_ocean_with_glowing_waves/00.jpg",0.281738,0.824183,0.244397,0.616342,0.234686,0.931572
+139,"Four birds with square wings","generated_samples_batch/0139_Four_birds_with_square_wings/00.jpg",0.279785,0.448977,0.270013,0.591056,0.207216,0.419831
+140,"A green cloud raining sand","generated_samples_batch/0140_A_green_cloud_raining_sand/00.jpg",0.295410,0.426747,0.268696,0.626503,0.232763,1.889036
+141,"Two suns side by side","generated_samples_batch/0141_Two_suns_side_by_side/00.jpg",0.279297,0.317131,0.270594,0.605776,0.204837,0.746522
+142,"A red giraffe","generated_samples_batch/0142_A_red_giraffe/00.jpg",0.288574,0.706339,0.267464,0.594266,0.221536,-0.064472
+143,"Three hands on one arm","generated_samples_batch/0143_Three_hands_on_one_arm/00.jpg",0.259277,0.638121,0.248463,0.580486,0.207756,-0.253815
+144,"A blue spider web","generated_samples_batch/0144_A_blue_spider_web/00.jpg",0.297852,0.541569,0.284906,0.603719,0.222165,0.523449
+145,"Two moons stacked vertically","generated_samples_batch/0145_Two_moons_stacked_vertically/00.jpg",0.282471,0.769722,0.288394,0.603951,0.219349,0.060040
+146,"Four flying rabbits","generated_samples_batch/0146_Four_flying_rabbits/00.jpg",0.289795,0.961218,0.303316,0.609104,0.227798,1.802079
+147,"A golden tree with crystal leaves","generated_samples_batch/0147_A_golden_tree_with_crystal_leaves/00.jpg",0.281494,0.956303,0.309328,0.605836,0.234805,0.986141
+AVERAGE,,,0.278294,0.700492,0.275495,0.601115,0.222819,0.861587
